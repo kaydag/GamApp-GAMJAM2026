@@ -18,19 +18,36 @@ public class BaseEnemy : MonoBehaviour
     float damage;
 
     //trạng thái
-    bool isDead;
-    bool isAttacking;
-    bool isMoving;
+    bool isDead = false;
+    private EnemyStateMachine stateMachine;
+
+    private EnemyMoveState moveState;
+    private EnemyAttackState attackState;
+    private EnemyDieState dieState;
+    private EnemyHurtState hurtState;
+
+    private GameObject attackTarget;
+    bool playerInRange = false;
     // Start is called before the first frame update
     private void Awake()
     {
         currentHealth = enemyData.maxHealth;
-        currentPoint = 0;
-        isDead = false;
-        isMoving = true;
+        currentPoint = 0; 
         waypoints = path.waypoints;
         damage = enemyData.damage;
+        isDead = false;
+
+        stateMachine = new EnemyStateMachine();
+        moveState = new EnemyMoveState(this);
+        dieState = new EnemyDieState(this);
+        hurtState = new EnemyHurtState(this, 0.2f);
     }
+    
+    void Start()
+    {
+        stateMachine.Initialize(moveState);
+    }
+
     private void OnEnable()
     {
         GameEvent.Attack += OnAttack;
@@ -40,31 +57,20 @@ public class BaseEnemy : MonoBehaviour
     {
         GameEvent.Attack -= OnAttack;
     }
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (isMoving)
-        {
-            Move();
-        }
-        else if (isAttacking)
-        {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
-            {
-                Attack(player);
-            }
-        }
+        stateMachine.LogicUpdate();
     }
 
-    protected virtual void Move()
+    private void FixedUpdate()
     {
-        if (isDead || waypoints.Count == 0) return;
+        stateMachine.PhysicsUpdate();
+    }
+    public virtual void Move()
+    {
+        if (waypoints.Count == 0) return;
         if (waypoints[currentPoint] == null)
         {
             currentPoint += moveDirection;
@@ -81,7 +87,7 @@ public class BaseEnemy : MonoBehaviour
             return;
         }
         Transform targetPoint = waypoints[currentPoint];
-        transform.position = Vector2.MoveTowards(transform.position,  targetPoint.position, enemyData.moveSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position,  targetPoint.position, enemyData.moveSpeed * Time.fixedDeltaTime);
         if (Vector2.Distance(transform.position, targetPoint.position) < 0.01f)
         {
             currentPoint += moveDirection;
@@ -102,9 +108,11 @@ public class BaseEnemy : MonoBehaviour
         if (isDead) return;
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Enemy is attacking the player!");
-            isAttacking = true;
-            isMoving = false;
+            attackTarget = other.gameObject;
+            playerInRange = true;
+            Debug.Log("Enemy detected Player");
+            attackState = new EnemyAttackState(this, attackTarget);
+            stateMachine.ChangeState(attackState);
         }
     }
 
@@ -112,31 +120,49 @@ public class BaseEnemy : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Enemy stopped attacking the player!");
-            isAttacking = false;
-            isMoving = true;
+            playerInRange = false;
+            attackTarget = null;
+            Debug.Log("Player left Enemy");
+            if (stateMachine.CurrentState is EnemyAttackState)
+            {
+                stateMachine.ChangeState(moveState);
+            }
         }
     }
-    protected virtual void Attack(GameObject target)
+    public virtual void Attack(GameObject target)
     {
         GameEvent.Attack?.Invoke(gameObject, target, damage);
-        Debug.Log("Attack Enemy");
     }
     private void OnAttack(GameObject attacker, GameObject target, float damage)
     {
-        if (target != gameObject || isDead) return;
+        if (target != gameObject) return;
         TakeDamage(damage);
     }
     private void TakeDamage(float damage)
     {
+        if (isDead) return;
         currentHealth -= damage;
-        if (currentHealth <= 0 && !isDead) Die();
+        if (currentHealth <= 0)
+        {
+            isDead = true;
+            stateMachine.ChangeState(dieState);
+        }
+        else stateMachine.ChangeState(hurtState);
     }
-    private void Die()
+    public void Die()
     {
-        isDead = true;
-        isMoving = false;
-        isAttacking = false;
         Destroy(gameObject, 0.5f);
+    }
+    public void ReturnFromHurt()
+    {
+        if (playerInRange && attackTarget != null)
+        {
+            attackState = new EnemyAttackState(this, attackTarget);
+            stateMachine.ChangeState(attackState);
+        }
+        else
+        {
+            stateMachine.ChangeState(moveState);
+        }
     }
 }
