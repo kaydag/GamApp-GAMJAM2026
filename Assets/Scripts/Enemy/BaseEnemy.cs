@@ -11,10 +11,11 @@ public class BaseEnemy : MonoBehaviour
     [SerializeField] private EnemyPath path;
 
     //chỉ số
-    [SerializeField] private int currentHealth;
+    [SerializeField] private float currentHealth;
     private List<Transform> waypoints;
     int currentPoint;
     int moveDirection = 1;
+    float damage;
 
     //trạng thái
     bool isDead;
@@ -28,6 +29,16 @@ public class BaseEnemy : MonoBehaviour
         isDead = false;
         isMoving = true;
         waypoints = path.waypoints;
+        damage = enemyData.damage;
+    }
+    private void OnEnable()
+    {
+        GameEvent.Attack += OnAttack;
+    }
+
+    private void OnDisable()
+    {
+        GameEvent.Attack -= OnAttack;
     }
     void Start()
     {
@@ -40,6 +51,14 @@ public class BaseEnemy : MonoBehaviour
         if (isMoving)
         {
             Move();
+        }
+        else if (isAttacking)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                Attack(player);
+            }
         }
     }
 
@@ -77,5 +96,47 @@ public class BaseEnemy : MonoBehaviour
                 moveDirection = 1;
             }
         }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (isDead) return;
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Enemy is attacking the player!");
+            isAttacking = true;
+            isMoving = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Enemy stopped attacking the player!");
+            isAttacking = false;
+            isMoving = true;
+        }
+    }
+    protected virtual void Attack(GameObject target)
+    {
+        GameEvent.Attack?.Invoke(gameObject, target, damage);
+        Debug.Log("Attack Enemy");
+    }
+    private void OnAttack(GameObject attacker, GameObject target, float damage)
+    {
+        if (target != gameObject || isDead) return;
+        TakeDamage(damage);
+    }
+    private void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0 && !isDead) Die();
+    }
+    private void Die()
+    {
+        isDead = true;
+        isMoving = false;
+        isAttacking = false;
+        Destroy(gameObject, 0.5f);
     }
 }

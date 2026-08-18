@@ -11,7 +11,7 @@ public enum TypeEnemy
 public class EnemyData : ScriptableObject
 {
     public TypeEnemy type;
-    public int maxHealth;
+    public float maxHealth;
     public float moveSpeed;
-    public int damage;
+    public float damage;
 }
