@@ -25,6 +25,9 @@ public class BaseEnemy : MonoBehaviour
     private EnemyAttackState attackState;
     private EnemyDieState dieState;
     private EnemyHurtState hurtState;
+    private EnemyIdleState idleState;
+
+    [SerializeField] private Animator animator;
 
     private GameObject attackTarget;
     bool playerInRange = false;
@@ -41,11 +44,14 @@ public class BaseEnemy : MonoBehaviour
         moveState = new EnemyMoveState(this);
         dieState = new EnemyDieState(this);
         hurtState = new EnemyHurtState(this, 0.2f);
+        idleState = new EnemyIdleState(this, 0.5f);
+
+        animator = GetComponent<Animator>();
     }
     
     void Start()
     {
-        stateMachine.Initialize(moveState);
+        stateMachine.Initialize(idleState);
     }
 
     private void OnEnable()
@@ -87,7 +93,9 @@ public class BaseEnemy : MonoBehaviour
             return;
         }
         Transform targetPoint = waypoints[currentPoint];
-        transform.position = Vector2.MoveTowards(transform.position,  targetPoint.position, enemyData.moveSpeed * Time.fixedDeltaTime);
+        Vector2 direction = targetPoint.position - transform.position;
+        UpdateAnimationDirection(direction);
+        transform.position = Vector2.MoveTowards(transform.position, targetPoint.position, enemyData.moveSpeed * Time.fixedDeltaTime);
         if (Vector2.Distance(transform.position, targetPoint.position) < 0.01f)
         {
             currentPoint += moveDirection;
@@ -110,7 +118,6 @@ public class BaseEnemy : MonoBehaviour
         {
             attackTarget = other.gameObject;
             playerInRange = true;
-            Debug.Log("Enemy detected Player");
             attackState = new EnemyAttackState(this, attackTarget);
             stateMachine.ChangeState(attackState);
         }
@@ -122,7 +129,6 @@ public class BaseEnemy : MonoBehaviour
         {
             playerInRange = false;
             attackTarget = null;
-            Debug.Log("Player left Enemy");
             if (stateMachine.CurrentState is EnemyAttackState)
             {
                 stateMachine.ChangeState(moveState);
@@ -165,4 +171,30 @@ public class BaseEnemy : MonoBehaviour
             stateMachine.ChangeState(moveState);
         }
     }
+    public void ReturnFromIdle()
+    {
+        stateMachine.ChangeState(moveState);
+    }
+    public void PlayIdleAnimation()
+    {
+        animator.Play("BaseEnemyIdle");
+    }
+    public void PlayMoveAnimation()
+    {
+        animator.Play("BaseEnemyMove");
+    }
+    private void UpdateAnimationDirection(Vector2 direction)
+    {
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            animator.SetFloat("Horizontal", direction.x > 0 ? 1 : -1);
+            animator.SetFloat("Vertical", 0);
+        }
+        else
+        {
+            animator.SetFloat("Horizontal", 0);
+            animator.SetFloat("Vertical",direction.y > 0 ? 1 : -1);
+        }
+    }
 }
+
