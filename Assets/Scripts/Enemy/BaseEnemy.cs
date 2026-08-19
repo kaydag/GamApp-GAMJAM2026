@@ -7,32 +7,32 @@ using static UnityEngine.GraphicsBuffer;
 
 public class BaseEnemy : MonoBehaviour
 {
-    [SerializeField] EnemyData enemyData;
-    [SerializeField] private EnemyPath path;
+    [SerializeField] protected EnemyData enemyData;
+    [SerializeField] protected EnemyPath path;
 
     //chỉ số
-    [SerializeField] private float currentHealth;
-    private List<Transform> waypoints;
-    int currentPoint;
-    int moveDirection = 1;
-    float damage;
+    [SerializeField] protected float currentHealth;
+    protected List<Transform> waypoints;
+    protected int currentPoint;
+    protected int moveDirection = 1;
+    protected float damage;
 
     //trạng thái
-    bool isDead = false;
-    private EnemyStateMachine stateMachine;
+    protected bool isDead = false;
+    protected EnemyStateMachine stateMachine;
 
-    private EnemyMoveState moveState;
-    private EnemyAttackState attackState;
-    private EnemyDieState dieState;
-    private EnemyHurtState hurtState;
-    private EnemyIdleState idleState;
+    protected EnemyMoveState moveState;
+    protected EnemyAttackState attackState;
+    protected EnemyDieState dieState;
+    protected EnemyHurtState hurtState;
+    protected EnemyIdleState idleState;
 
-    [SerializeField] private Animator animator;
+    [SerializeField] protected Animator animator;
 
-    private GameObject attackTarget;
-    bool playerInRange = false;
+    protected GameObject attackTarget;
+    protected bool playerInRange = false;
     // Start is called before the first frame update
-    private void Awake()
+    protected virtual void Awake()
     {
         currentHealth = enemyData.maxHealth;
         currentPoint = 0; 
@@ -48,29 +48,29 @@ public class BaseEnemy : MonoBehaviour
 
         animator = GetComponent<Animator>();
     }
-    
-    void Start()
+
+    protected virtual void Start()
     {
         stateMachine.Initialize(idleState);
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         GameEvent.Attack += OnAttack;
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         GameEvent.Attack -= OnAttack;
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         stateMachine.LogicUpdate();
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         stateMachine.PhysicsUpdate();
     }
