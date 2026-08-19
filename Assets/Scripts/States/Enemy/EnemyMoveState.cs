@@ -9,7 +9,7 @@ public class EnemyMoveState : IState
     }
     public void Enter()
     {
-        Debug.Log("Enemy Enter Move State");
+        enemy.PlayMoveAnimation();
     }
     public void LogicUpdate()
     {
@@ -21,6 +21,6 @@ public class EnemyMoveState : IState
     }
     public void Exit()
     {
-        Debug.Log("Enemy Exit Move State");
+
     }
 }
