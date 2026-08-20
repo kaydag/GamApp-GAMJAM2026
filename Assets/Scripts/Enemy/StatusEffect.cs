@@ -11,7 +11,6 @@ public class StatusEffect : MonoBehaviour
     }
     public void ApplyBurn(float duration, float damagePerSecond)
     {
-        Debug.Log("burn");
         if (burnCoroutine != null)
         {
             StopCoroutine(burnCoroutine);
@@ -32,7 +31,6 @@ public class StatusEffect : MonoBehaviour
 
     public void ApplyStun(float duration)
     {
-        Debug.Log("stun");
         if (stunCoroutine != null)
         {
             StopCoroutine(stunCoroutine);

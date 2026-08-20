@@ -181,6 +181,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1653624055310714631}
     m_Modifications:
+    - target: {fileID: 1071324334817235415, guid: 41136d461d7162b4d8d4192d56ef3e14, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1565576053910854951}
     - target: {fileID: 7926281368913023931, guid: 41136d461d7162b4d8d4192d56ef3e14, type: 3}
       propertyPath: m_Name
       value: Blood
