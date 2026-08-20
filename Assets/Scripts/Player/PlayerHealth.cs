@@ -61,5 +61,6 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
         GameEvent.HealthChanged?.Invoke(gameObject, currentHealth, maxHealth);
+        Debug.Log(currentHealth);
     }
 }
