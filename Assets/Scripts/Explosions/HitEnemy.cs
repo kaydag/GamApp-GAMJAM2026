@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class HitEnemy : MonoBehaviour
 {
-    [SerializeField] private float damage;
+    [SerializeField] float damage = 10f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            GameObject target = collision.gameObject;
-            GameEvent.Attack?.Invoke(gameObject, target, damage);
+            GameEvent.Attack?.Invoke(transform.root.gameObject, collision.gameObject,damage);
         }
     }
 }
