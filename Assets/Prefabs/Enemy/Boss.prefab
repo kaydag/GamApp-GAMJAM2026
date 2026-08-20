@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fbd4c9436f1bd47b9712d9085780d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 349a63c24cce3c3418058e8c32b83d11, type: 2}
+  enemyData: {fileID: 11400000, guid: 9320223a0ffc9504795f07385cb5fcfb, type: 2}
   path: {fileID: -1238750922796662435, guid: 30f6d18f8e40c3c4abdbd6e0d33e8c9a, type: 3}
   currentHealth: 0
   animator: {fileID: 0}

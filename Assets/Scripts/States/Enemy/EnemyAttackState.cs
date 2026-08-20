@@ -11,7 +11,6 @@ public class EnemyAttackState : IState
     }
     public void Enter()
     {
-        Debug.Log("Enemy Enter Attack State");
         enemy.Attack(target);
     }
     public void LogicUpdate()
@@ -25,6 +24,6 @@ public class EnemyAttackState : IState
     }
     public void Exit()
     {
-        Debug.Log("Enemy Exit Attack State");
+
     }
 }

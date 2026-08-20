@@ -5,8 +5,8 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Rock : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float damage = 10f;
+    [SerializeField] protected float speed = 5f;
+    [SerializeField] protected float damage = 10f;
 
     private void Awake()
     {
@@ -24,7 +24,7 @@ public class Rock : MonoBehaviour
         Move();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
