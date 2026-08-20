@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class HitEnemy : MonoBehaviour
 {
+    [SerializeField] private float damage;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        BaseEnemy enemy = collision.GetComponent<BaseEnemy>();
-        if (enemy != null)
+        if (collision.CompareTag("Enemy"))
         {
-            // trừ máu enemy...
+            GameObject target = collision.gameObject;
+            GameEvent.Attack?.Invoke(gameObject, target, damage);
         }
     }
 }
