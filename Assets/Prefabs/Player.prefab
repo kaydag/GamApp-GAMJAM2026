@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 705241404452986966}
   - component: {fileID: 6289729899020545781}
   - component: {fileID: 712414515263345536}
+  - component: {fileID: 1190167743148218714}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -220,6 +221,8 @@ MonoBehaviour:
   StartNormalAttackEffect: {fileID: 4046627594089128429}
   NormalAttackEffect: {fileID: 5514227488939839748, guid: 1c14ab4a05d546d45b9c3136d791f661, type: 3}
   FirstSkillEffect: {fileID: 1973873175153069680, guid: e2bc3fe64e496bd4696eeefbf1e52edd, type: 3}
+  normalAttackCooldown: 0.2
+  firstSkillCooldown: 5
 --- !u!114 &712414515263345536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +238,20 @@ MonoBehaviour:
   StartNormalAttackEffect: {fileID: 4046627594089128429}
   NormalAttackEffect: {fileID: 5514227488939839748, guid: bdca7e93017ea62469936d2158a4e173, type: 3}
   FirstSkillEffect: {fileID: 1973873175153069680, guid: 1fc69e4ab2834c04eba74e8fa7def731, type: 3}
+  normalAttackCooldown: 0.2
+  firstSkillCooldown: 5
+--- !u!114 &1190167743148218714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609045788687365089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 674a44a5e53935f419707883b7bdc7f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4046627594089128429
 GameObject:
   m_ObjectHideFlags: 0

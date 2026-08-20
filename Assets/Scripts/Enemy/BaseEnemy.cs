@@ -68,6 +68,8 @@ public class BaseEnemy : MonoBehaviour
     protected virtual void Update()
     {
         stateMachine.LogicUpdate();
+        Debug.Log("enemy" + currentHealth);
+        CheckDie();
     }
 
     protected virtual void FixedUpdate()
@@ -148,12 +150,11 @@ public class BaseEnemy : MonoBehaviour
     {
         if (isDead) return;
         currentHealth -= damage;
-        if (currentHealth <= 0)
+        if (currentHealth > 0)
         {
-            isDead = true;
-            stateMachine.ChangeState(dieState);
+            stateMachine.ChangeState(hurtState);
         }
-        else stateMachine.ChangeState(hurtState);
+        else CheckDie();
     }
     public void Die()
     {
@@ -194,6 +195,15 @@ public class BaseEnemy : MonoBehaviour
         {
             animator.SetFloat("Horizontal", 0);
             animator.SetFloat("Vertical",direction.y > 0 ? 1 : -1);
+        }
+    }
+    void CheckDie()
+    {
+        if (currentHealth <= 0)
+        {
+            isDead = true;
+            stateMachine.ChangeState(dieState);
+            Die();
         }
     }
 }
