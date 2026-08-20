@@ -5,7 +5,8 @@ using UnityEngine;
 public enum TypeEnemy
 {
     Normal,
-    //thêm sau
+    TreeMonster,
+    Boss
 }
 [CreateAssetMenu(fileName = "EnemyData", menuName = "ScriptableObjects/EnemyData", order = 1)]
 public class EnemyData : ScriptableObject

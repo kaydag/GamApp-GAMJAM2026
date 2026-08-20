@@ -9,7 +9,6 @@ public class EnemyDieState : IState
     }
     public void Enter()
     {
-        Debug.Log("Enemy Enter Die State");
         enemy.Die();
     }
     public void LogicUpdate()
