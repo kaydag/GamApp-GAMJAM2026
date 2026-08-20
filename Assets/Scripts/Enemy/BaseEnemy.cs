@@ -197,6 +197,14 @@ public class BaseEnemy : MonoBehaviour
             animator.SetFloat("Vertical",direction.y > 0 ? 1 : -1);
         }
     }
+    public float GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+    public float GetMaxHealth()
+    {
+        return enemyData.maxHealth;
+    }
     void CheckDie()
     {
         if (currentHealth <= 0)

@@ -7,8 +7,7 @@ public class HitEnemy : MonoBehaviour
     [SerializeField] float damage = 10f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        BaseEnemy enemy = collision.GetComponent<BaseEnemy>();
-        if (enemy != null)
+        if (collision.CompareTag("Enemy"))
         {
             GameEvent.Attack?.Invoke(transform.root.gameObject, collision.gameObject,damage);
         }
