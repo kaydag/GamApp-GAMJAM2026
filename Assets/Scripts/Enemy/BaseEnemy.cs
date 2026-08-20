@@ -68,7 +68,6 @@ public class BaseEnemy : MonoBehaviour
     protected virtual void Update()
     {
         stateMachine.LogicUpdate();
-        Debug.Log("enemy" + currentHealth);
         CheckDie();
     }
 
