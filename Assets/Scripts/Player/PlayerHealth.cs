@@ -14,12 +14,12 @@ public class PlayerHealth : MonoBehaviour
     private void OnEnable()
     {
         GameEvent.Attack += OnAttack;
-        GameEvent.PlayerHealthChanged += Heal;
+        GameEvent.PlayerHeal += Heal;
     }
     private void OnDisable()
     {
         GameEvent.Attack -= OnAttack;
-        GameEvent.PlayerHealthChanged -= Heal;
+        GameEvent.PlayerHeal -= Heal;
     }
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log($"Current Health: {currentHealth}");
+
     }
 
     private void OnAttack(GameObject attacker, GameObject target, float damage)
@@ -44,6 +44,7 @@ public class PlayerHealth : MonoBehaviour
     void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        GameEvent.HealthChanged?.Invoke(gameObject,currentHealth, maxHealth);
         if (currentHealth <= 0)
         {
             Die();
@@ -59,5 +60,6 @@ public class PlayerHealth : MonoBehaviour
     void Heal(float amount)
     {
         currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
+        GameEvent.HealthChanged?.Invoke(gameObject, currentHealth, maxHealth);
     }
 }

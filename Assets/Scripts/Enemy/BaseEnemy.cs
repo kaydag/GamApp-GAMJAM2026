@@ -150,6 +150,7 @@ public class BaseEnemy : MonoBehaviour
     {
         if (isDead) return;
         currentHealth -= damage;
+        GameEvent.HealthChanged?.Invoke(gameObject, currentHealth, enemyData.maxHealth);
         if (currentHealth > 0)
         {
             stateMachine.ChangeState(hurtState);
