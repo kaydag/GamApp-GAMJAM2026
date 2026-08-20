@@ -38,4 +38,14 @@ public class FirstFormAttack : MonoBehaviour, IFormAttack
             Destroy(effect, 1f);
         }
     }
+
+    //xử lí phá khối gỗ của enemy
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Wood wood = collision.GetComponent<Wood>();
+        if (wood != null)
+        {
+            wood.Break();
+        }
+    }
 }
