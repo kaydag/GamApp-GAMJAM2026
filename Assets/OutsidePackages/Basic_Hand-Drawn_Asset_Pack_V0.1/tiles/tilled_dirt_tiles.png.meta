@@ -1,0 +1,4351 @@
+fileFormatVersion: 2
+guid: 2c25dd545c421da45937e62e9ca23c9d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_0
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1364
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a6f8edc3eed8449a8628c65c4c3c62
+      internalID: 1800065630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_1
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1364
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ca6df1361464542966a3d614d93a93
+      internalID: -1898827997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1364
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cb8a89104587e488454e927f643501
+      internalID: 758636637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_3
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1364
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817d72f8c9c2353478760044553b9e7f
+      internalID: 1333683042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_4
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1364
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e58cf4b2cf0b9140aed768f82807b88
+      internalID: 230576590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1364
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37decdebdbdbb64a848d86c2869a504
+      internalID: 1391379032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1300
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1639ace72116a104f9d02f258d14cd09
+      internalID: 1090179492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1300
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4642eabae515a8b4099bc28a86da3c2d
+      internalID: 214434114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1300
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51620f3a3e337e4eb54906ccba3e909
+      internalID: 1718383699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1300
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2b0fc63624b914ebf3eaecc2ed3762
+      internalID: 1844653796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1300
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb121441588ef341badcdb5f20e7350
+      internalID: -1893002874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_11
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1300
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa0ba208fae183469e6580f965e4ce3
+      internalID: -873688338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_12
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1300
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce50aae37993a874e8e4c58a37740630
+      internalID: -1372038370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1300
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62217b02db453ad44a6ade0554879407
+      internalID: -375209166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1300
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bab2eab4ece1d46bb9a57e2905ef47
+      internalID: 86439627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1300
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96a6ea2ec3c17d439c45f0908e8ec1a
+      internalID: 1552648054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a05b546cd7300c42b346af57e6c593c
+      internalID: 1738490684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11eed4fa07958b4db2712b0240a9338
+      internalID: -90244427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0606bb1584bcab540a7eb83d55023bff
+      internalID: -283775395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_19
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d134ac84f553fb4898447d944e7e061
+      internalID: 1442223158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_20
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007ed96239d226344b3b7429f4255871
+      internalID: -397007960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_21
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236052445f756d846bce63764ce6cb57
+      internalID: 856926661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_22
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eceec7ca019cda4448cd3809f385478b
+      internalID: 1511800221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_23
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486ae75aab170e84e829e91f52d166ed
+      internalID: -1456354819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_24
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f253eb4d4bf9e47b65a36b233d004e
+      internalID: -714106390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_25
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1236
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3b95127e1268a478bda0b08511e9d9
+      internalID: 896448874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79742f786a08c534dbb7b457975e5af7
+      internalID: 741743229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_27
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7065285c5f62f2b45ac811c7be98c10d
+      internalID: -273187780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb87442fb3a9caf49b5bd26c6819b703
+      internalID: 1547035291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_29
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3dbe960d95e5774899a14af42d19c70
+      internalID: -632775973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_30
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b068ab5d211564a895781143bd2b16
+      internalID: 1328175466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1e789102b5ff1479e74e25db4d02a9
+      internalID: 1962726841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_32
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60aa109b11d1cbf47a91e57e167c8573
+      internalID: 1457218821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_33
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04742b44054b5194c9af11a4402cd0f8
+      internalID: 362960856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_34
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9517fdb62c00b5744aab09edaaf548f8
+      internalID: 1230212377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_35
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a752517c9ce54348862bad9b0acd84d
+      internalID: -539869870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_36
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2feee009c8fa03c44a4624686346cf55
+      internalID: 641996948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_37
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1172
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ca981c049b9074d95a579810f595ec
+      internalID: -2057426246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ec2a149cee5464a864753b2f01c6bf
+      internalID: -1405467767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_39
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962503a693b4c3f43b03b4405520f4fe
+      internalID: 1502875862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_40
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8001d3ea59e60e64faaa5c9af95fc352
+      internalID: -2132827935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_41
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29f79eddf13b874286427aa8af9c8d0
+      internalID: 113041377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7256cef0665a4a42b136bd9145ad1c0
+      internalID: 1114984077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_43
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96974b5aeb8561647a437ba553482be4
+      internalID: -2111041635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_44
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa458b32de095d41baa588a10dfe375
+      internalID: -784660315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_45
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e679dfb49c7e13e41a0b1e0f739d76bb
+      internalID: 223680893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_46
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4393f1f259a12084b8fb0a10b329ec20
+      internalID: -767458875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_47
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888a6ccdf90c0124a826982ff4ead52e
+      internalID: 2015848386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_48
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1108
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d038efbdfd13d4a9d5eb26b097a9df
+      internalID: 2053077622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_49
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1044
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3a3244ebdfc6547b99111ad3f67ca4
+      internalID: -927081587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_50
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1044
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192d42915f152cc4498de32f119274cf
+      internalID: -1052861443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_51
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1044
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93766878849c22642b343db1098766c3
+      internalID: -618743249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_52
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1044
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71ea2283dd69ee46a5c01b12df24292
+      internalID: 576981113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_53
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1044
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307ea1cf9b3e10746933bc214bd634ef
+      internalID: -1340309404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_54
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 980
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6c11db7d2313b4d868d6b1322b202b
+      internalID: -117638121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_55
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 980
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8be8e8987e8434d96f3224071d0019
+      internalID: -1567927719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_56
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 980
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631115602138e0240899334d47807426
+      internalID: 674020728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_57
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 980
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc2b3c76da020c4382a2bc0b2add7e7
+      internalID: 562865150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_58
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 980
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3946709adc936f244b3ec1829b6d4217
+      internalID: 590315063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_59
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 980
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a1783a910bb8f49a8e0938ab163aa2
+      internalID: -446949468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_60
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 980
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3dafd7790e6c14882a68d676ae852b
+      internalID: 1657867957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_61
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 980
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c7677a476faeb418e2ccdf610c7994
+      internalID: 308326204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_62
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 980
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a01c940bfbb2a478ce70d4d3ea6466
+      internalID: 1498782327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_63
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 980
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2495ee04b8ba7b3409e99bfb65a49676
+      internalID: -1384388865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_64
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 980
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf8b05d2edc3474993e3e806b298527
+      internalID: -1408677000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_65
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 916
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497008afc221a794ebba4054dbb00fa9
+      internalID: -1659691261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_66
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 916
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75e6e88893ab3444a829054c318e13a
+      internalID: 428802918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_67
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 916
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf2cbfb516803a48a8b76593b283bdc
+      internalID: 1658886992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_68
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 916
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32a76de5582d6b408aa4e85ac4bf8a6
+      internalID: 1055182219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_69
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 916
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02845d59e4c938043905025112bf6107
+      internalID: -1399164064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_70
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 916
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefe4110af470534996fdaa4697c8ec7
+      internalID: -506758147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_71
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 916
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467d68248ecc5794e8419c0f82ebb9c2
+      internalID: -419943310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_72
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 916
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf9794e98e197245a2dfc408ed002f8
+      internalID: -1042911350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_73
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 916
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19abe061c9b889649b1781015b811a26
+      internalID: 1847227217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_74
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 916
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e9a714cc7e86c4f9c1a3df42fae78b
+      internalID: 1679282769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_75
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 916
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9b328844135054a9c967f09564dc65
+      internalID: 1560943726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 852
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38dc83d4be4d1f142bceb0103065d914
+      internalID: -820316395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_77
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 852
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6574c401796b84baf0a1434e5e6ce0
+      internalID: 860928825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_78
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 852
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105a322059093d746ad72799ad990802
+      internalID: 586860252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_79
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 852
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0dbaab6a7879b44b97bcc57764c51a
+      internalID: -88136032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_80
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 852
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b25244e3275ae41abadfcd9c31c683
+      internalID: 1862153014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_81
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 852
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c1fee064c12f744a4f4275d8ecfb7e
+      internalID: -1152236034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_82
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 852
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f46ffec60624ab439ff3dbaa09ddf51
+      internalID: -414793866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_83
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 852
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed1753ddc170244ba457d869203266a
+      internalID: 510039416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_84
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 852
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e0a7f74fb378e4eab3f267c22381b1
+      internalID: -143523774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_85
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 852
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03de9625a6ca43f41b44002d6f95592b
+      internalID: 965798641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_86
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 852
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ae823bd401b814bafe74a5c04dc87c
+      internalID: 2026635487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_87
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 788
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1d156c4b6fec549affc6242789ed91
+      internalID: -322455280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_88
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 788
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f043b7acc6d8aab4e951a0b04a956d0a
+      internalID: -1241030275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_89
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 788
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab11732ce1b57f47b1191cc83e28451
+      internalID: -1453096979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_90
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 788
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5763f83849d2a45a7db6987c607d9d
+      internalID: -1791941852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_91
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 788
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff6f3c66e14e2049a5844c01725691e
+      internalID: -830658507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_92
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 788
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e79b2cb992727b4ea30375483b5174e
+      internalID: 872065325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_93
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 788
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af514b11bb895a84e8add27dc9ed10c6
+      internalID: 1382239011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_94
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 788
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbebea1b976223f4da7c7fe82b3970ad
+      internalID: -1854761327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_95
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 788
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc3b0840d2c22d478cd396fcf1d01e2
+      internalID: 496187368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_96
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 788
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c69d1f7e7d9b1f44a441e5b51cccffc
+      internalID: 1099744273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_97
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 788
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9728855aa60bdf34b879925415636538
+      internalID: -462096967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 724
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296ab6b0faa6a5545bf96ecee218897c
+      internalID: 1040670090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_99
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 724
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b292bdc9ab04ac64ba7528ba28188787
+      internalID: -1293990800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_100
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 724
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c8085f46d503b4abc505517f95ea89
+      internalID: -1022472933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_101
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 724
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7da11cfd5d7654396af3ba8751468a
+      internalID: 1719875510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_102
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 724
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16911494ad473ae42baa2bf51244156d
+      internalID: -821970044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_103
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 724
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8325fd87b33ef1742b3c3174b31ee374
+      internalID: 1748372874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_104
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 724
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec39295723207964088f09e163b5d156
+      internalID: -1474351022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_105
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 724
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa31108465362442b9be09ae5ae2e6e
+      internalID: -1528313414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_106
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 724
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71b5cfdf8668f44d8ca3014abe13a01
+      internalID: -1584816066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_107
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 724
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a62c0be6155d8249b2cec287c9bbbc6
+      internalID: -1624172909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_108
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 724
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23db077cfada65d4682d9963eb12c3f6
+      internalID: 732846469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_109
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7625902bd364704b8bcfe578e210b36
+      internalID: 872096456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_110
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cc6235c06cbdb45821bcc0e52b6848
+      internalID: 366846085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_111
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf6ddea356426a4c8862b86ad572505
+      internalID: -262740941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_112
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035cb0dad1b5bff4093bbae7fdf22a21
+      internalID: 1061585050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_113
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b217512a6f8094bbd15841f5e4f682
+      internalID: -50706219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_114
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102aee2b71907e741a9412226f1807ec
+      internalID: 2074422945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_115
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d129e33ea32da90429ded3e6535e83d3
+      internalID: 552082372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_116
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28594fc7a4957864da3767a69165fdb3
+      internalID: 171042432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_117
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695b6d4d50b4c004997f87567ed18a57
+      internalID: 363536873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_118
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79215d4fa9232cb4a921bd3778fb1614
+      internalID: 970960828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_119
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 660
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e443b63b5c89c4e46b3bb6d6e98afbb9
+      internalID: 1150566707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 596
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8489de351e6752a439a7c09dfbb4406c
+      internalID: -1337282863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_121
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 596
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1231d174559b449a9bf9bb3d4e9a9f
+      internalID: 1379473258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_122
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 596
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680ffbec6670b7a409dccf0ca07e9add
+      internalID: -458021582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_123
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 596
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14122f0a000d295428dc17ca3df546d2
+      internalID: 355016508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_124
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 596
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd0080f626f2aa43aa480d201efe847
+      internalID: -1057932323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_125
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 596
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d4011c535e897458dddfe2fccb7ab1
+      internalID: 645089663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_126
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 596
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87881be7a92787a4c802c37eec25fd9d
+      internalID: -275147312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_127
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 596
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e44692331020b8468b6a8d8d4f60240
+      internalID: 823002448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_128
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 596
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464036d0462772a41a728f7c60ad40fa
+      internalID: 18144603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_129
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 596
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2eaef84dbbb1314e995e628f712eb7f
+      internalID: 1985484295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_130
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 596
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286cce6c829c3914a930dba1b300569a
+      internalID: -1839651733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_131
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 596
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c992ee715f2b87441a71a499a5042d18
+      internalID: -595520434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81207bebf61dfb944a1bc289e46dd959
+      internalID: 1551734221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_133
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 532
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3d39bb64b9aa24b8a1686eaf7b7053
+      internalID: -278215661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_134
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 532
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89bc1982b1c588f46a525a015d92dce3
+      internalID: 140734648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_135
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 532
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22d552b0a7ce5b49b15a1cc30d04431
+      internalID: -626746472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_136
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 532
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63d98acc1c85d14f937460a1618c6f9
+      internalID: 1227959832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_137
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 532
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05d9751eea110a4db8c4884f2f91f9f
+      internalID: 1709612875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_138
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 532
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0988c8697f13e0f4a84acee86ebf8896
+      internalID: 1075542235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_139
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 532
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472eb6788beb4be4c86c916d6b1f15a2
+      internalID: 914024726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_140
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 532
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a84326fca630446b56495bb7ee3a48
+      internalID: -174764305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_141
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 532
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59cd79505dffd646a8c7d34d66fe326
+      internalID: -1045836273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_142
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 468
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9fe0a7c3c0c2147bd85ad350b3995d
+      internalID: -1681370067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_143
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 468
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a2921127c9cfd42be3137f9e04e76c
+      internalID: 1045975605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_144
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 468
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41b5b8a87ce69448b7b087113bf5a5b
+      internalID: -87589104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_145
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 468
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4771ea2bce1f24e99870441b9220b6
+      internalID: -1656672043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_146
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 468
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a6b9950c1cb3148b5f8f0c77fd99d0
+      internalID: -2135543931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_147
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 468
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6e4d481a3fe6e449a07a1d631d722d
+      internalID: 2101943515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_148
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 468
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0854afdc2093974685d41e071bed773
+      internalID: 185166569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_149
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 468
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9b1bc6bb1f8f149ae45ad65526c6e0
+      internalID: -1107323745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b82d87f4ca91542bcf7dbd76c27c9e
+      internalID: 1581286678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_151
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d549c53dfa57cd45ada1a7be6bee94f
+      internalID: -1993006952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_152
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76eb81dd22e0d9f4b8548f3d33e93924
+      internalID: -1340835259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_153
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3aaae294ea83548a0e603040775202
+      internalID: -458479529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_154
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a67b07200cf3941aff0761f78e8ab0
+      internalID: 603313314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_155
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94303a48e63ae3a4f91827c1642a11a8
+      internalID: 1720405446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_156
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fd4969f9232f94ab7dfe5a3a61b1d5
+      internalID: 2102231186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_157
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f485c00fb5b241245b2366ab9ad64701
+      internalID: -299103808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_158
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b39ee928689711458a558bcf68cd4e0
+      internalID: -734592685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_159
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0a7ab9c6362e14da6a41df5423a78e
+      internalID: -268231470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3badace8a76f7834bacc71613414889c
+      internalID: -659343879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_161
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 340
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515a9b67347e36946a40e3ef5f414ca1
+      internalID: -1637086871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_162
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 340
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785ca5ccaa36ac6488bfb987fe21f2e0
+      internalID: 2124666334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_163
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 340
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f6e34e17f10004c96abba366e77ba4
+      internalID: -1370977288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_164
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 340
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4165fc6c3848647b7e67bea718ed2c
+      internalID: -868549458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_165
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 340
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a158d74ef30771747aa01e57b2f009eb
+      internalID: -477483267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_166
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 340
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6877776f8fb3b6840bd64e0c99b12154
+      internalID: -2053683921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_167
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 340
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0275fc79c784a4b9cc1f64f5da9b3d
+      internalID: -184675285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_168
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 340
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3fcdd7bc4c7ac4c9c6ea76c02ebf7b
+      internalID: 243606185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_169
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 340
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb0f2467688aff489d4ae06686abe84
+      internalID: -580750329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_170
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 276
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29793d4e01d4fd44ba8b6868b52746e
+      internalID: 1860208731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_171
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 276
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e283fde4f49cf45b521fddbe0e285d
+      internalID: -1596273832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_172
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 276
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b983beeca0d715147ad7e039ba36c4be
+      internalID: 1266649173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_173
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 276
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2f4c6022d48434bad75614c57d58d4
+      internalID: 1295971227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_174
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 276
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae68f6e6f9027547bf00ae9d5006fed
+      internalID: -948287275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_175
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 276
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965254502e8eeb64da439a309211c674
+      internalID: -691698297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_176
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 276
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e289c84c6de68494daf1c0d07a53bb53
+      internalID: 1959847022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_177
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 276
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03952d5495c70e4d9e54dd2ce6af9e4
+      internalID: 230157144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_178
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 276
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff424de7cc3dc7b4c98e6a9232a23067
+      internalID: 1406918976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_179
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 276
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb1a3655e735aa40b213d14eff6deb8
+      internalID: 1792568969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 212
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4ff76545d5ad946be096e72af6ddd9
+      internalID: 471935480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_181
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 212
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56efff0b7f7e3bd4f95905ee12463254
+      internalID: -1570855316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_182
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 212
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da9bbfb7652c344680d807e95106b61
+      internalID: 1242552981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_183
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 148
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac455e685139cd48ac3049e9e309f47
+      internalID: -125462876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_184
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 148
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201f32b521e70234aa71a1d808c735f7
+      internalID: 2100982106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_185
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 148
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50652694549d61344a25480968775917
+      internalID: -2021790378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_186
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 84
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52f067dad90f0941b0eda95a6f9fba0
+      internalID: 1746079465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_187
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 84
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f754e9a7136be47b7d1c861e6860c2
+      internalID: -577890489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_188
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 84
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3229f6d695bf9a346a7c4fdeb0daf908
+      internalID: 40935083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_189
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10c6a95d38cc07458a247ec13442411
+      internalID: 1235180035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_190
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 20
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe53c760fcefec4cb616c9b025e5db2
+      internalID: -1485303075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilled_dirt_tiles_191
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 20
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ab22cb4ea9f954b80dc785122196ac
+      internalID: 1777876152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tilled_dirt_tiles_0: 1800065630
+      tilled_dirt_tiles_1: -1898827997
+      tilled_dirt_tiles_10: -1893002874
+      tilled_dirt_tiles_100: -1022472933
+      tilled_dirt_tiles_101: 1719875510
+      tilled_dirt_tiles_102: -821970044
+      tilled_dirt_tiles_103: 1748372874
+      tilled_dirt_tiles_104: -1474351022
+      tilled_dirt_tiles_105: -1528313414
+      tilled_dirt_tiles_106: -1584816066
+      tilled_dirt_tiles_107: -1624172909
+      tilled_dirt_tiles_108: 732846469
+      tilled_dirt_tiles_109: 872096456
+      tilled_dirt_tiles_11: -873688338
+      tilled_dirt_tiles_110: 366846085
+      tilled_dirt_tiles_111: -262740941
+      tilled_dirt_tiles_112: 1061585050
+      tilled_dirt_tiles_113: -50706219
+      tilled_dirt_tiles_114: 2074422945
+      tilled_dirt_tiles_115: 552082372
+      tilled_dirt_tiles_116: 171042432
+      tilled_dirt_tiles_117: 363536873
+      tilled_dirt_tiles_118: 970960828
+      tilled_dirt_tiles_119: 1150566707
+      tilled_dirt_tiles_12: -1372038370
+      tilled_dirt_tiles_120: -1337282863
+      tilled_dirt_tiles_121: 1379473258
+      tilled_dirt_tiles_122: -458021582
+      tilled_dirt_tiles_123: 355016508
+      tilled_dirt_tiles_124: -1057932323
+      tilled_dirt_tiles_125: 645089663
+      tilled_dirt_tiles_126: -275147312
+      tilled_dirt_tiles_127: 823002448
+      tilled_dirt_tiles_128: 18144603
+      tilled_dirt_tiles_129: 1985484295
+      tilled_dirt_tiles_13: -375209166
+      tilled_dirt_tiles_130: -1839651733
+      tilled_dirt_tiles_131: -595520434
+      tilled_dirt_tiles_132: 1551734221
+      tilled_dirt_tiles_133: -278215661
+      tilled_dirt_tiles_134: 140734648
+      tilled_dirt_tiles_135: -626746472
+      tilled_dirt_tiles_136: 1227959832
+      tilled_dirt_tiles_137: 1709612875
+      tilled_dirt_tiles_138: 1075542235
+      tilled_dirt_tiles_139: 914024726
+      tilled_dirt_tiles_14: 86439627
+      tilled_dirt_tiles_140: -174764305
+      tilled_dirt_tiles_141: -1045836273
+      tilled_dirt_tiles_142: -1681370067
+      tilled_dirt_tiles_143: 1045975605
+      tilled_dirt_tiles_144: -87589104
+      tilled_dirt_tiles_145: -1656672043
+      tilled_dirt_tiles_146: -2135543931
+      tilled_dirt_tiles_147: 2101943515
+      tilled_dirt_tiles_148: 185166569
+      tilled_dirt_tiles_149: -1107323745
+      tilled_dirt_tiles_15: 1552648054
+      tilled_dirt_tiles_150: 1581286678
+      tilled_dirt_tiles_151: -1993006952
+      tilled_dirt_tiles_152: -1340835259
+      tilled_dirt_tiles_153: -458479529
+      tilled_dirt_tiles_154: 603313314
+      tilled_dirt_tiles_155: 1720405446
+      tilled_dirt_tiles_156: 2102231186
+      tilled_dirt_tiles_157: -299103808
+      tilled_dirt_tiles_158: -734592685
+      tilled_dirt_tiles_159: -268231470
+      tilled_dirt_tiles_16: 1738490684
+      tilled_dirt_tiles_160: -659343879
+      tilled_dirt_tiles_161: -1637086871
+      tilled_dirt_tiles_162: 2124666334
+      tilled_dirt_tiles_163: -1370977288
+      tilled_dirt_tiles_164: -868549458
+      tilled_dirt_tiles_165: -477483267
+      tilled_dirt_tiles_166: -2053683921
+      tilled_dirt_tiles_167: -184675285
+      tilled_dirt_tiles_168: 243606185
+      tilled_dirt_tiles_169: -580750329
+      tilled_dirt_tiles_17: -90244427
+      tilled_dirt_tiles_170: 1860208731
+      tilled_dirt_tiles_171: -1596273832
+      tilled_dirt_tiles_172: 1266649173
+      tilled_dirt_tiles_173: 1295971227
+      tilled_dirt_tiles_174: -948287275
+      tilled_dirt_tiles_175: -691698297
+      tilled_dirt_tiles_176: 1959847022
+      tilled_dirt_tiles_177: 230157144
+      tilled_dirt_tiles_178: 1406918976
+      tilled_dirt_tiles_179: 1792568969
+      tilled_dirt_tiles_18: -283775395
+      tilled_dirt_tiles_180: 471935480
+      tilled_dirt_tiles_181: -1570855316
+      tilled_dirt_tiles_182: 1242552981
+      tilled_dirt_tiles_183: -125462876
+      tilled_dirt_tiles_184: 2100982106
+      tilled_dirt_tiles_185: -2021790378
+      tilled_dirt_tiles_186: 1746079465
+      tilled_dirt_tiles_187: -577890489
+      tilled_dirt_tiles_188: 40935083
+      tilled_dirt_tiles_189: 1235180035
+      tilled_dirt_tiles_19: 1442223158
+      tilled_dirt_tiles_190: -1485303075
+      tilled_dirt_tiles_191: 1777876152
+      tilled_dirt_tiles_2: 758636637
+      tilled_dirt_tiles_20: -397007960
+      tilled_dirt_tiles_21: 856926661
+      tilled_dirt_tiles_22: 1511800221
+      tilled_dirt_tiles_23: -1456354819
+      tilled_dirt_tiles_24: -714106390
+      tilled_dirt_tiles_25: 896448874
+      tilled_dirt_tiles_26: 741743229
+      tilled_dirt_tiles_27: -273187780
+      tilled_dirt_tiles_28: 1547035291
+      tilled_dirt_tiles_29: -632775973
+      tilled_dirt_tiles_3: 1333683042
+      tilled_dirt_tiles_30: 1328175466
+      tilled_dirt_tiles_31: 1962726841
+      tilled_dirt_tiles_32: 1457218821
+      tilled_dirt_tiles_33: 362960856
+      tilled_dirt_tiles_34: 1230212377
+      tilled_dirt_tiles_35: -539869870
+      tilled_dirt_tiles_36: 641996948
+      tilled_dirt_tiles_37: -2057426246
+      tilled_dirt_tiles_38: -1405467767
+      tilled_dirt_tiles_39: 1502875862
+      tilled_dirt_tiles_4: 230576590
+      tilled_dirt_tiles_40: -2132827935
+      tilled_dirt_tiles_41: 113041377
+      tilled_dirt_tiles_42: 1114984077
+      tilled_dirt_tiles_43: -2111041635
+      tilled_dirt_tiles_44: -784660315
+      tilled_dirt_tiles_45: 223680893
+      tilled_dirt_tiles_46: -767458875
+      tilled_dirt_tiles_47: 2015848386
+      tilled_dirt_tiles_48: 2053077622
+      tilled_dirt_tiles_49: -927081587
+      tilled_dirt_tiles_5: 1391379032
+      tilled_dirt_tiles_50: -1052861443
+      tilled_dirt_tiles_51: -618743249
+      tilled_dirt_tiles_52: 576981113
+      tilled_dirt_tiles_53: -1340309404
+      tilled_dirt_tiles_54: -117638121
+      tilled_dirt_tiles_55: -1567927719
+      tilled_dirt_tiles_56: 674020728
+      tilled_dirt_tiles_57: 562865150
+      tilled_dirt_tiles_58: 590315063
+      tilled_dirt_tiles_59: -446949468
+      tilled_dirt_tiles_6: 1090179492
+      tilled_dirt_tiles_60: 1657867957
+      tilled_dirt_tiles_61: 308326204
+      tilled_dirt_tiles_62: 1498782327
+      tilled_dirt_tiles_63: -1384388865
+      tilled_dirt_tiles_64: -1408677000
+      tilled_dirt_tiles_65: -1659691261
+      tilled_dirt_tiles_66: 428802918
+      tilled_dirt_tiles_67: 1658886992
+      tilled_dirt_tiles_68: 1055182219
+      tilled_dirt_tiles_69: -1399164064
+      tilled_dirt_tiles_7: 214434114
+      tilled_dirt_tiles_70: -506758147
+      tilled_dirt_tiles_71: -419943310
+      tilled_dirt_tiles_72: -1042911350
+      tilled_dirt_tiles_73: 1847227217
+      tilled_dirt_tiles_74: 1679282769
+      tilled_dirt_tiles_75: 1560943726
+      tilled_dirt_tiles_76: -820316395
+      tilled_dirt_tiles_77: 860928825
+      tilled_dirt_tiles_78: 586860252
+      tilled_dirt_tiles_79: -88136032
+      tilled_dirt_tiles_8: 1718383699
+      tilled_dirt_tiles_80: 1862153014
+      tilled_dirt_tiles_81: -1152236034
+      tilled_dirt_tiles_82: -414793866
+      tilled_dirt_tiles_83: 510039416
+      tilled_dirt_tiles_84: -143523774
+      tilled_dirt_tiles_85: 965798641
+      tilled_dirt_tiles_86: 2026635487
+      tilled_dirt_tiles_87: -322455280
+      tilled_dirt_tiles_88: -1241030275
+      tilled_dirt_tiles_89: -1453096979
+      tilled_dirt_tiles_9: 1844653796
+      tilled_dirt_tiles_90: -1791941852
+      tilled_dirt_tiles_91: -830658507
+      tilled_dirt_tiles_92: 872065325
+      tilled_dirt_tiles_93: 1382239011
+      tilled_dirt_tiles_94: -1854761327
+      tilled_dirt_tiles_95: 496187368
+      tilled_dirt_tiles_96: 1099744273
+      tilled_dirt_tiles_97: -462096967
+      tilled_dirt_tiles_98: 1040670090
+      tilled_dirt_tiles_99: -1293990800
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
