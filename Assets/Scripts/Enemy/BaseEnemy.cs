@@ -165,6 +165,7 @@ public class BaseEnemy : MonoBehaviour
     }
     public void Die()
     {
+        GameEvent.EnemyDie?.Invoke(this);
         Destroy(gameObject, 0.5f);
     }
     public void ReturnFromHurt()

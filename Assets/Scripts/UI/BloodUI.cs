@@ -31,7 +31,7 @@ public class BloodUI : MonoBehaviour
     void UpdateBloodUI(GameObject targetObject, float currentHealth, float maxHealth)
     {
         if (targetObject != target) return;
-        float percent = currentHealth / maxHealth;
+        float percent = (currentHealth > 0 ? currentHealth : 0) / maxHealth;
         if (bloodBarImage != null)
         {
             bloodBarImage.fillAmount = percent;
