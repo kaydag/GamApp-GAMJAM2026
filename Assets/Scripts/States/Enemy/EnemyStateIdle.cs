@@ -13,7 +13,7 @@ public class EnemyIdleState : IState
     public void Enter()
     {
         timer = idleDuration;
-        enemy.PlayIdleAnimation();
+        enemy.Animation.PlayState(EnemyAnimationState.Idle);
     }
 
     public void LogicUpdate()

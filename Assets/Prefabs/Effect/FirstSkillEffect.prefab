@@ -9702,6 +9702,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
+  effectType: 1
+  duration: 5
+  damagePerSecond: 2
 --- !u!82 &7760262451685780262
 AudioSource:
   m_ObjectHideFlags: 0
