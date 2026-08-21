@@ -53,8 +53,11 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Player Died");
-        Destroy(gameObject);
+        //Destroy(gameObject);
         //quay về điểm checkpoint
+        currentHealth = maxHealth;
+        gameObject.transform.position = Vector3.zero;
+        GameEvent.HealthChanged?.Invoke(gameObject, currentHealth, maxHealth);
     }
 
     void Heal(float amount)
