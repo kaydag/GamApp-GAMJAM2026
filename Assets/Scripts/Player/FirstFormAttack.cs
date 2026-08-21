@@ -52,6 +52,7 @@ public class FirstFormAttack : MonoBehaviour, IFormAttack
     public Sprite GetSwapIcon()
     {
         return SwapIcon;
+    }
 
     //xử lí phá khối gỗ của enemy
     private void OnTriggerEnter2D(Collider2D collision)
