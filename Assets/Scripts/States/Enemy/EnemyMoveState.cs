@@ -9,7 +9,7 @@ public class EnemyMoveState : IState
     }
     public void Enter()
     {
-        enemy.PlayMoveAnimation();
+        enemy.Animation.PlayState(EnemyAnimationState.Move);
     }
     public void LogicUpdate()
     {

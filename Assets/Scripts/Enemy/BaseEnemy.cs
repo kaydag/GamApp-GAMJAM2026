@@ -28,7 +28,7 @@ public class BaseEnemy : MonoBehaviour
     protected EnemyIdleState idleState;
     protected EnemyStunState stunState;
 
-    [SerializeField] protected Animator animator;
+    public EnemyAnimation Animation { get; private set; }
 
     protected GameObject attackTarget;
     protected bool playerInRange = false;
@@ -52,7 +52,7 @@ public class BaseEnemy : MonoBehaviour
         stunState = new EnemyStunState(this);
         attackState = new EnemyAttackState(this, null);
 
-        animator = GetComponent<Animator>();
+        Animation = GetComponent<EnemyAnimation>();
         statusEffect = GetComponent<StatusEffect>();
     }
 
@@ -102,7 +102,7 @@ public class BaseEnemy : MonoBehaviour
         }
         Transform targetPoint = waypoints[currentPoint];
         Vector2 direction = targetPoint.position - transform.position;
-        UpdateAnimationDirection(direction);
+        Animation.SetDirection(direction);
         transform.position = Vector2.MoveTowards(transform.position, targetPoint.position, enemyData.moveSpeed * Time.fixedDeltaTime);
         if (Vector2.Distance(transform.position, targetPoint.position) < 0.01f)
         {
@@ -183,27 +183,6 @@ public class BaseEnemy : MonoBehaviour
     {
         stateMachine.ChangeState(moveState);
     }
-    public void PlayIdleAnimation()
-    {
-        animator.Play("BaseEnemyIdle");
-    }
-    public void PlayMoveAnimation()
-    {
-        animator.Play("BaseEnemyMove");
-    }
-    private void UpdateAnimationDirection(Vector2 direction)
-    {
-        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-        {
-            animator.SetFloat("Horizontal", direction.x > 0 ? 1 : -1);
-            animator.SetFloat("Vertical", 0);
-        }
-        else
-        {
-            animator.SetFloat("Horizontal", 0);
-            animator.SetFloat("Vertical",direction.y > 0 ? 1 : -1);
-        }
-    }
     public float GetCurrentHealth()
     {
         return currentHealth;
@@ -250,10 +229,6 @@ public class BaseEnemy : MonoBehaviour
         {
             stateMachine.ChangeState(moveState);
         }
-    }
-    public void PlayStunAnimation()
-    {
-        animator.Play("BaseEnemyStun");
     }
     public void TakeDamage(float damage, bool triggerHurt)
     {
