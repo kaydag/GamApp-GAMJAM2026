@@ -10,6 +10,7 @@ public class EnemyDieState : IState
     public void Enter()
     {
         enemy.Die();
+        enemy.Animation.PlayState(EnemyAnimationState.Die);
     }
     public void LogicUpdate()
     {

@@ -13,7 +13,7 @@ public class EnemyHurtState : IState
     public void Enter()
     {
         timer = hurtDuration;
-        // Play Hurt Animation sau này
+        enemy.Animation.PlayState(EnemyAnimationState.Hurt);
     }
     public void LogicUpdate()
     {

@@ -9,7 +9,7 @@ public class EnemyStunState : IState
     }
     public void Enter()
     {
-        enemy.PlayStunAnimation();
+        enemy.Animation.PlayState(EnemyAnimationState.Stun);
     }
     public void LogicUpdate()
     {
@@ -22,6 +22,6 @@ public class EnemyStunState : IState
     }
     public void Exit()
     {
-        enemy.PlayMoveAnimation();
+
     }
 }
