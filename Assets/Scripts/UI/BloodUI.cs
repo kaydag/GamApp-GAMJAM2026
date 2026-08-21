@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
+using UnityEngine.UI;
 
 public class BloodUI : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer bloodBar;
+    [SerializeField] private Image bloodBarImage;
+    [SerializeField] private GameObject target;
     private void OnEnable()
     {
         GameEvent.HealthChanged += UpdateBloodUI;
@@ -25,10 +28,18 @@ public class BloodUI : MonoBehaviour
     {
         
     }
-    void UpdateBloodUI(GameObject target, float currentHealth, float maxHealth)
+    void UpdateBloodUI(GameObject targetObject, float currentHealth, float maxHealth)
     {
-        if (target != transform.root.gameObject) return;
+        if (targetObject != target) return;
         float percent = currentHealth / maxHealth;
-        bloodBar.transform.localScale = new Vector3(percent,1f,1f);
+        if (bloodBarImage != null)
+        {
+            bloodBarImage.fillAmount = percent;
+            return;
+        }
+        else if (bloodBar != null)
+        {
+            bloodBar.transform.localScale = new Vector3(percent, 1f, 1f);
+        }
     }
 }

@@ -26,11 +26,15 @@ public class BaseEnemy : MonoBehaviour
     protected EnemyDieState dieState;
     protected EnemyHurtState hurtState;
     protected EnemyIdleState idleState;
+    protected EnemyStunState stunState;
 
     [SerializeField] protected Animator animator;
 
     protected GameObject attackTarget;
     protected bool playerInRange = false;
+
+    StatusEffect statusEffect;
+    public bool IsStunned { get; private set; }
     // Start is called before the first frame update
     protected virtual void Awake()
     {
@@ -45,8 +49,11 @@ public class BaseEnemy : MonoBehaviour
         dieState = new EnemyDieState(this);
         hurtState = new EnemyHurtState(this, 0.2f);
         idleState = new EnemyIdleState(this, 0.5f);
+        stunState = new EnemyStunState(this);
+        attackState = new EnemyAttackState(this, null);
 
         animator = GetComponent<Animator>();
+        statusEffect = GetComponent<StatusEffect>();
     }
 
     protected virtual void Start()
@@ -77,7 +84,7 @@ public class BaseEnemy : MonoBehaviour
     }
     public virtual void Move()
     {
-        if (waypoints.Count == 0) return;
+        if (waypoints.Count == 0 || IsStunned) return;
         if (waypoints[currentPoint] == null)
         {
             currentPoint += moveDirection;
@@ -145,7 +152,7 @@ public class BaseEnemy : MonoBehaviour
         if (target != gameObject) return;
         TakeDamage(damage);
     }
-    private void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         if (isDead) return;
         currentHealth -= damage;
@@ -205,13 +212,62 @@ public class BaseEnemy : MonoBehaviour
     {
         return enemyData.maxHealth;
     }
-    void CheckDie()
+    protected void CheckDie()
     {
+        if (isDead) return;
         if (currentHealth <= 0)
         {
             isDead = true;
             stateMachine.ChangeState(dieState);
             Die();
+        }
+    }
+    public void ApplyBurn(float duration, float damage)
+    {
+        statusEffect.ApplyBurn(duration, damage);
+    }
+    public void SetStunned(bool value)
+    {
+        IsStunned = value;
+        if (isDead) return;
+        if (value)
+        {
+            stateMachine.ChangeState(stunState);
+        }
+        else
+        {
+            ReturnFromStun();
+        }
+    }
+    public void ReturnFromStun()
+    {
+        if (playerInRange && attackTarget != null)
+        {
+            attackState = new EnemyAttackState(this, attackTarget);
+            stateMachine.ChangeState(attackState);
+        }
+        else
+        {
+            stateMachine.ChangeState(moveState);
+        }
+    }
+    public void PlayStunAnimation()
+    {
+        animator.Play("BaseEnemyStun");
+    }
+    public void TakeDamage(float damage, bool triggerHurt)
+    {
+        if (isDead) return;
+        currentHealth -= damage;
+        GameEvent.HealthChanged?.Invoke(gameObject,currentHealth,enemyData.maxHealth);
+        if (currentHealth <= 0)
+        {
+            CheckDie();
+            return;
+        }
+        if (triggerHurt)
+        {
+            stateMachine.ChangeState(hurtState);
         }
     }
 }
