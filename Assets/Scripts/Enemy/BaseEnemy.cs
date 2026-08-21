@@ -39,8 +39,11 @@ public class BaseEnemy : MonoBehaviour
     protected virtual void Awake()
     {
         currentHealth = enemyData.maxHealth;
-        currentPoint = 0; 
-        waypoints = path.waypoints;
+        currentPoint = 0;
+        if (path != null)
+            waypoints = path.waypoints;
+        else
+            waypoints = new List<Transform>();
         damage = enemyData.damage;
         isDead = false;
 
