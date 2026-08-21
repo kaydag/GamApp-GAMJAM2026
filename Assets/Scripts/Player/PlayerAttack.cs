@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerAttack : MonoBehaviour
     private IFormAttack currentFormAttack;
     private List<IFormAttack> FormAttacks = new List<IFormAttack>();
     private PlayerController playerController;
+    [SerializeField] private Image SwapButton;
+    [SerializeField] private Image NormalButton;
+    [SerializeField] private Image SkillButton;
     private void Awake()
     {
         if (instance == null)
@@ -35,6 +39,9 @@ public class PlayerAttack : MonoBehaviour
         if (index < FormAttacks.Count)
         {
             currentFormAttack = FormAttacks[index];
+            SwapButton.sprite = currentFormAttack.GetSwapIcon();
+            NormalButton.sprite = currentFormAttack.GetNormalAttackIcon();
+            SkillButton.sprite = currentFormAttack.GetFirstSkillIcon();
         }
     }
 }

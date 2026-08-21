@@ -5,9 +5,12 @@ using UnityEngine;
 public class FirstFormAttack : MonoBehaviour, IFormAttack
 {
     [Header("References")]
+    [SerializeField] private Sprite SwapIcon;
     [SerializeField] private GameObject StartNormalAttackEffect;
     [SerializeField] private GameObject NormalAttackEffect;
+    [SerializeField] private Sprite NormalAttackIcon;
     [SerializeField] private GameObject FirstSkillEffect;
+    [SerializeField] private Sprite FirstSkillIcon;
     [Header("Cooldowns")]
     [SerializeField] private float normalAttackCooldown = 0.2f;
     [SerializeField] private float firstSkillCooldown = 5f;
@@ -37,5 +40,17 @@ public class FirstFormAttack : MonoBehaviour, IFormAttack
         {
             Destroy(effect, 1f);
         }
+    }
+    public Sprite GetNormalAttackIcon()
+    {
+        return NormalAttackIcon;
+    }
+    public Sprite GetFirstSkillIcon()
+    {
+        return FirstSkillIcon;
+    }
+    public Sprite GetSwapIcon()
+    {
+        return SwapIcon;
     }
 }
