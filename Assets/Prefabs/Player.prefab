@@ -218,9 +218,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4623705324e742add5423f83d56a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SwapIcon: {fileID: 21300000, guid: eed44235dcbd621438f7c0c4f05e2356, type: 3}
   StartNormalAttackEffect: {fileID: 4046627594089128429}
   NormalAttackEffect: {fileID: 5514227488939839748, guid: 1c14ab4a05d546d45b9c3136d791f661, type: 3}
+  NormalAttackIcon: {fileID: 21300000, guid: 08c71e4e0565fe4469d1e0a593047156, type: 3}
   FirstSkillEffect: {fileID: 1973873175153069680, guid: e2bc3fe64e496bd4696eeefbf1e52edd, type: 3}
+  FirstSkillIcon: {fileID: 21300000, guid: b450d0b398880cb458f83d1a01b399ca, type: 3}
   normalAttackCooldown: 0.2
   firstSkillCooldown: 5
 --- !u!114 &712414515263345536
@@ -235,9 +238,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5407cdf025d8d0f40ae90e6607e71f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SwapIcon: {fileID: 21300000, guid: ee40d72ece864764f9d17d015aedb524, type: 3}
   StartNormalAttackEffect: {fileID: 4046627594089128429}
   NormalAttackEffect: {fileID: 5514227488939839748, guid: bdca7e93017ea62469936d2158a4e173, type: 3}
+  NormalAttackIcon: {fileID: 21300000, guid: 0389074d1deba1c448d45812db40c0df, type: 3}
   FirstSkillEffect: {fileID: 1973873175153069680, guid: 1fc69e4ab2834c04eba74e8fa7def731, type: 3}
+  FirstSkillIcon: {fileID: 21300000, guid: bbe833a9207e7fa41bbd3ce71ad09605, type: 3}
   normalAttackCooldown: 0.2
   firstSkillCooldown: 5
 --- !u!114 &1190167743148218714

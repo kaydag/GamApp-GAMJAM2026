@@ -6,4 +6,7 @@ public interface IFormAttack
 {
     public void NormalAttack(Vector2 Direction);
     public void FirstSkill(Vector2 Direction);
+    public Sprite GetNormalAttackIcon();
+    public Sprite GetSwapIcon();
+    public Sprite GetFirstSkillIcon();
 }
