@@ -1,119 +1,81 @@
 ﻿using UnityEngine;
+
 public class Boss : BaseEnemy
 {
+    [Header("Throw Skill")]
     [SerializeField] private GameObject rockPrefab;
 
-    [Header("Skill")]
-    [SerializeField] private float cooldownSkill = 10f;
-    [SerializeField] private float skillDuration = 4f;
-    [SerializeField] private float rockCooldown = 0.5f;
-    [SerializeField] private int rockCount = 8;
+    // Khoảng thời gian giữa 2 đợt ném
+    [SerializeField] private float throwInterval = 0.8f;
 
-    private float cooldownTimer;
-    private float skillTimer;
-    private float rockTimer;
+    // Khoảng thời gian giữa các lần dùng skill
+    [SerializeField] private float skillCooldown = 10f;
 
-    private bool isUsingSkill = false;
+    // Có 2 đợt, mỗi đợt 8 hướng
+    [SerializeField] private int throwRounds = 2;
 
     [Header("Roll")]
     [SerializeField] private float rollSpeed = 8f;
     [SerializeField] private float rollStopDistance = 0.5f;
+    [SerializeField] private float rollDamage = 20f;
 
-    private bool isRolling = false;
-    private Vector3 rollTarget;
+    [Header("Colliders")]
+    [SerializeField] private Collider2D normalCollider;
+    [SerializeField] private Collider2D rollCollider;
 
-    protected override void Start()
+    private EnemyStateThrow throwState;
+    private EnemyStateRoll rollState;
+
+    private float skillTimer;
+
+    public GameObject RockPrefab => rockPrefab;
+    public float ThrowInterval => throwInterval;
+    public int ThrowRounds => throwRounds;
+
+    public float RollSpeed => rollSpeed;
+    public float RollStopDistance => rollStopDistance;
+    public float RollDamage => rollDamage;
+
+    protected override void Awake()
     {
-        base.Start();
+        base.Awake();
 
-        cooldownTimer = 0f;
+        throwState = new EnemyStateThrow(this);
+        rollState = new EnemyStateRoll(this);
+
         skillTimer = 0f;
-        rockTimer = 0f;
     }
 
     protected override void Update()
     {
-        if (isUsingSkill)
-        {
-            skillTimer += Time.deltaTime;
-            rockTimer += Time.deltaTime;
-            // Bắn đá
-            if (rockTimer >= rockCooldown)
-            {
-                SpawnRocks();
-                rockTimer = 0f;
-            }
-            // HẾT SKILL
-            if (skillTimer >= skillDuration)
-            {
-                EndSkill();
-            }
-            return;
-        }
-        if (isRolling)
-        {
-            RollToPlayer();
-            return;
-        }
         base.Update();
-        cooldownTimer += Time.deltaTime;
-        if (cooldownTimer >= cooldownSkill)
-        {
-            StartSkill();
-        }
+        if (stateMachine.CurrentState == throwState || stateMachine.CurrentState == rollState) return;
+        skillTimer += Time.deltaTime;
+        if (skillTimer >= skillCooldown) StartThrowSkill();
     }
 
-    protected override void FixedUpdate()
+    public void StartThrowSkill()
     {
-        if (!isUsingSkill)
-        {
-            base.FixedUpdate();
-        }
-    }
-    private void StartSkill()
-    {
-        isUsingSkill = true;
-
         skillTimer = 0f;
-        rockTimer = 0f;
-        cooldownTimer = 0f;
+        stateMachine.ChangeState(throwState);
+    }
+    public void StartRoll()
+    {
+        stateMachine.ChangeState(rollState);
     }
 
-    private void EndSkill()
+    public void ReturnFromRoll()
     {
-        isUsingSkill = false;
-        rockTimer = 0f;
-        StartRoll();
+        stateMachine.ChangeState(idleState);
     }
 
-    private void SpawnRocks()
+    public void DealRollDamage(GameObject player)
     {
-        float angleStep = 360f / rockCount;
-
-        for (int i = 0; i < rockCount; i++)
-        {
-            float angle = i * angleStep;
-            Quaternion rotation = Quaternion.Euler(0f, 0f, angle);
-            AudioManager.Instance.PlaySFX(AudioManager.Instance.rockThrowSound);
-            Instantiate(rockPrefab, transform.position, rotation);
-        }
+        GameEvent.Attack?.Invoke(gameObject, player, rollDamage);
     }
-    private void StartRoll()
+    public void SetRollMode(bool value)
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null) return;
-        isRolling = true;
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.rollSound);
-        rollTarget = player.transform.position;
-    }
-    private void RollToPlayer()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, rollTarget, rollSpeed * Time.deltaTime);
-        if (Vector3.Distance(transform.position, rollTarget) <= rollStopDistance)
-        {
-            isRolling = false;
-            //xử lí attack sau
-            skillTimer = 0f;
-        }
+        if (normalCollider != null) normalCollider.enabled = !value;
+        if (rollCollider != null) rollCollider.enabled = value;
     }
 }
