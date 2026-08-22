@@ -27,8 +27,12 @@ public class TreeMonster : BaseEnemy
         timer += Time.deltaTime;
         if (timer >= cooldown)
         {
-            Instantiate(woodPrefab, spawnPoint.position, Quaternion.identity);
+            GameObject wood = Instantiate(woodPrefab, spawnPoint.position, Quaternion.identity);
             timer = 0f;
+            if (wood != null && TimeManager.instance != null)
+            {
+                TimeManager.instance.ChangeColorByTime(wood.transform);
+            }
         }
     }
 }

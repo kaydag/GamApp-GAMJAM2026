@@ -7,16 +7,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject questPopup;
     [SerializeField] private GameObject dialoguePopup;
     [SerializeField] private Dialogue dialogueScript;
-    [Header("Hội thoại mở đầu")]
+    [Header("Hội thoại khi mới vào game")]
     [SerializeField] private List<string> welcomeDialogues = new List<string>();
-    [Header("Hội thoại giữa các nhiệm vụ")]
-    [SerializeField] private List<string> intermissionDialogues = new List<string>();
+    [Header("Hội thoại trước khi vào nhiệm vụ")]
+    [SerializeField] private List<string> dialoguesBeforeQuest = new List<string>();
+    [Header("Hội thoại sau khi hoàn thành nhiệm vụ")]
+    [SerializeField] private List<string> dialoguesAfterQuest = new List<string>();
     [Header("Hội thoại khi end game")]
     [SerializeField] private List<string> finalEndingDialogues = new List<string>();
     private int currentDialogueIndex = 0;
-    private enum DialogueState { Welcome, Intermission, FinalEnding }
+    private enum DialogueState { Welcome, AfterQuest, BeforeQuest, FinalEnding }
     private DialogueState currentState = DialogueState.Welcome;
-
     public static GameManager instance;
     private void Awake()
     {
@@ -29,48 +30,44 @@ public class GameManager : MonoBehaviour
         if (dialoguePopup != null) dialoguePopup.SetActive(true);
         currentState = DialogueState.Welcome;
         currentDialogueIndex = 0;
-        if (welcomeDialogues.Count > 0 && dialogueScript != null)
-        {
-            dialogueScript.StartDialogue(welcomeDialogues[currentDialogueIndex]);
-        }
+        dialogueScript.StartDialogue(welcomeDialogues[currentDialogueIndex]);
     }
+
     public void OnClickNextDialogue()
     {
-        currentDialogueIndex++;
-        List<string> activeList = GetActiveDialogueList();
-        if (currentDialogueIndex < activeList.Count)
+        // Riêng Welcome và FinalEnding là list nhiều câu
+        if (currentState == DialogueState.Welcome || currentState == DialogueState.FinalEnding)
         {
-            dialogueScript.StartDialogue(activeList[currentDialogueIndex]);
+            currentDialogueIndex++;
+            List<string> activeList = (currentState == DialogueState.Welcome) ? welcomeDialogues : finalEndingDialogues;
+            if (currentDialogueIndex < activeList.Count)
+            {
+                dialogueScript.StartDialogue(activeList[currentDialogueIndex]);
+            }
+            else
+            {
+                HandleDialoguePhaseCompletion();
+            }
         }
         else
         {
+            // Các trạng thái khác bấm Next là kết thúc phase hội thoại hiện tại
             HandleDialoguePhaseCompletion();
         }
     }
-    private List<string> GetActiveDialogueList()
-    {
-        switch (currentState)
-        {
-            case DialogueState.Welcome: return welcomeDialogues;
-            case DialogueState.Intermission: return intermissionDialogues;
-            case DialogueState.FinalEnding: return finalEndingDialogues;
-            default: return welcomeDialogues;
-        }
-    }
+
     private void HandleDialoguePhaseCompletion()
     {
         if (currentState == DialogueState.Welcome)
         {
-            // Hết hội thoại chào mừng -> Mở quest group đầu tiên
-            if (dialoguePopup != null) dialoguePopup.SetActive(false);
-            if (questPopup != null) questPopup.SetActive(true);
-            if (QuestManager.Instance != null) QuestManager.Instance.StartFirstQuest();
+            // Hết Welcome -> Bật hội thoại BeforeQuest đầu tiên
+            currentState = DialogueState.BeforeQuest;
+            if (dialoguePopup != null) dialoguePopup.SetActive(true);
+            dialogueScript.StartDialogue(dialoguesBeforeQuest[QuestManager.Instance.currentQuestIndex]);
         }
-        else if (currentState == DialogueState.Intermission)
+        else if (currentState == DialogueState.AfterQuest)
         {
-            // Hết hội thoại chuyển ngày/group -> Tắt dialogue, mở lại quest popup cho ngày mới
-            if (dialoguePopup != null) dialoguePopup.SetActive(false);
-            if (questPopup != null) questPopup.SetActive(true);
+            // Hết hội thoại After -> Gọi TimeManager chuyển ngày/đêm, sau đó mở tiếp BeforeQuest của ngày mới
             if (TimeManager.instance != null)
             {
                 TimeManager.instance.GameFill();
@@ -79,33 +76,53 @@ public class GameManager : MonoBehaviour
             {
                 PlayerController.instance.gameObject.transform.position = Vector3.zero;
             }
-            if (QuestManager.Instance != null) QuestManager.Instance.ProceedToNextGroup();
+
+            // Giữ dialoguePopup bật để chạy tiếp BeforeQuest
+            currentState = DialogueState.BeforeQuest;
+            if (dialoguePopup != null) dialoguePopup.SetActive(true);
+            dialogueScript.StartDialogue(dialoguesBeforeQuest[QuestManager.Instance.currentQuestIndex]);
+        }
+        else if (currentState == DialogueState.BeforeQuest)
+        {
+            // ĐÃ ĐỌC XONG HỘI THOẠI BEFORE -> LÚC NÀY MỚI CHÍNH THỨC TẮT DIALOGUE VÀ GỌI QUESTMANAGER LOAD QUEST
+            if (dialoguePopup != null) dialoguePopup.SetActive(false);
+            if (questPopup != null) questPopup.SetActive(true);
+
+            if (QuestManager.Instance != null)
+            {
+                QuestManager.Instance.ProceedToNextGroup();
+            }
         }
         else if (currentState == DialogueState.FinalEnding)
         {
-            // Hết hội thoại kết thúc game -> Tắt luôn khung thoại
             if (dialoguePopup != null) dialoguePopup.SetActive(false);
         }
     }
-    public void TriggerIntermissionDialogues(bool hasMoreQuests)
+
+    // Được gọi từ QuestManager khi hoàn thành một nhóm nhiệm vụ
+    public void TriggerIntermissionDialogues(bool hasMoreQuests, int finishedGroupIndex)
     {
         if (questPopup != null) questPopup.SetActive(false);
         if (dialoguePopup != null) dialoguePopup.SetActive(true);
-        currentDialogueIndex = 0;
-        if (hasMoreQuests) // qua ngày
+
+        if (hasMoreQuests)
         {
-            currentState = DialogueState.Intermission; 
-            if (intermissionDialogues.Count > 0 && dialogueScript != null)
-            {
-                dialogueScript.StartDialogue(intermissionDialogues[currentDialogueIndex]);
-            }
+            // Chạy đúng 1 câu AfterQuest tương ứng với nhóm vừa hoàn thành
+            currentState = DialogueState.AfterQuest;
+            dialogueScript.StartDialogue(dialoguesAfterQuest[finishedGroupIndex]);
         }
-        else // hết game
+        else
         {
+            // Hoàn thành nhiệm vụ cuối cùng -> Chạy Final Ending
             currentState = DialogueState.FinalEnding;
+            currentDialogueIndex = 0;
             if (finalEndingDialogues.Count > 0 && dialogueScript != null)
             {
                 dialogueScript.StartDialogue(finalEndingDialogues[currentDialogueIndex]);
+            }
+            else
+            {
+                if (dialoguePopup != null) dialoguePopup.SetActive(false);
             }
         }
     }

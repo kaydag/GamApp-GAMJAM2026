@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour, ICollidable
         StateMachine = new PlayerStateMachine();
         StateMachine.AddState(new PlayerIdleState(this));
         StateMachine.AddState(new PlayerMoveState(this));
+        StateMachine.AddState(new PlayerAttackState(this));
+        StateMachine.AddState(new PlayerSkillState(this));
         playerAttack = GetComponent<PlayerAttack>();
     }
     private void Start()
@@ -61,7 +63,7 @@ public class PlayerController : MonoBehaviour, ICollidable
         isInSecondForm = !isInSecondForm;
         Animator.runtimeAnimatorController = isInSecondForm ? SecondFormController : FirstFormController;
         // (Tùy chọn) Kích hoạt trigger chạy animation biến hình ở đây nếu có
-        Animator.SetTrigger("Swap");
+        // Animator.SetTrigger("Swap");
         playerAttack.SwapFormAttack();
     }
 }
