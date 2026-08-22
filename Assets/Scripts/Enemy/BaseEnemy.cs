@@ -129,6 +129,8 @@ public class BaseEnemy : MonoBehaviour
         {
             attackTarget = other.gameObject;
             playerInRange = true;
+            if (this is TreeMonster)
+                return;
             attackState = new EnemyAttackState(this, attackTarget);
             stateMachine.ChangeState(attackState);
         }
@@ -140,6 +142,8 @@ public class BaseEnemy : MonoBehaviour
         {
             playerInRange = false;
             attackTarget = null;
+            if (this is TreeMonster)
+                return;
             if (stateMachine.CurrentState is EnemyAttackState)
             {
                 stateMachine.ChangeState(moveState);
@@ -169,19 +173,10 @@ public class BaseEnemy : MonoBehaviour
     public void Die()
     {
         GameEvent.EnemyDie?.Invoke(this);
-        Destroy(gameObject, 0.5f);
     }
     public void ReturnFromHurt()
     {
-        if (playerInRange && attackTarget != null)
-        {
-            attackState = new EnemyAttackState(this, attackTarget);
-            stateMachine.ChangeState(attackState);
-        }
-        else
-        {
-            stateMachine.ChangeState(moveState);
-        }
+        stateMachine.ChangeState(idleState);
     }
     public void ReturnFromIdle()
     {
@@ -202,7 +197,6 @@ public class BaseEnemy : MonoBehaviour
         {
             isDead = true;
             stateMachine.ChangeState(dieState);
-            Die();
         }
     }
     public void ApplyBurn(float duration, float damage)
@@ -224,20 +218,13 @@ public class BaseEnemy : MonoBehaviour
     }
     public void ReturnFromStun()
     {
-        if (playerInRange && attackTarget != null)
-        {
-            attackState = new EnemyAttackState(this, attackTarget);
-            stateMachine.ChangeState(attackState);
-        }
-        else
-        {
-            stateMachine.ChangeState(moveState);
-        }
+        stateMachine.ChangeState(idleState);
     }
     public void TakeDamage(float damage, bool triggerHurt)
     {
         if (isDead) return;
         currentHealth -= damage;
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.enemyHitSound);
         GameEvent.HealthChanged?.Invoke(gameObject,currentHealth,enemyData.maxHealth);
         if (currentHealth <= 0)
         {

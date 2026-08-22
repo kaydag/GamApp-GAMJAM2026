@@ -52,7 +52,6 @@ public class PlayerHealth : MonoBehaviour
     }
     void Die()
     {
-        Debug.Log("Player Died");
         //Destroy(gameObject);
         //quay về điểm checkpoint
         currentHealth = maxHealth;
@@ -64,6 +63,5 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
         GameEvent.HealthChanged?.Invoke(gameObject, currentHealth, maxHealth);
-        Debug.Log(currentHealth);
     }
 }

@@ -12,6 +12,7 @@ public class EnemyAttackState : IState
     public void Enter()
     {
         enemy.Attack(target);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.enemyAttackSound);
         enemy.Animation.PlayState(EnemyAnimationState.Attack);
     }
     public void LogicUpdate()

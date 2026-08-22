@@ -9,7 +9,9 @@ public enum EnemyAnimationState
     Attack,
     Hurt,
     Die,
-    Stun
+    Stun,
+    Throw,
+    Roll
 }
 
 public class EnemyAnimation : MonoBehaviour
@@ -35,7 +37,6 @@ public class EnemyAnimation : MonoBehaviour
     }
     public void PlayState(EnemyAnimationState state)
     {
-        Debug.Log($"Play animation: {state}");
         animator.Play(state.ToString());
     }
     public void SetDirection(Vector2 direction)

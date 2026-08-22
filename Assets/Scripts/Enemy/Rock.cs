@@ -30,17 +30,22 @@ public class Rock : MonoBehaviour
         {
             GameObject target = collision.gameObject;
             GameEvent.Attack?.Invoke(gameObject, target, damage);
-            Destroy(gameObject);
+            OnDestroy();
         }
 
         else if (collision.CompareTag("Wall"))
         {
-            Destroy(gameObject);
+            OnDestroy();
         }
     }
 
     private void Move()
     {
         transform.position += transform.right * speed * Time.deltaTime;
+    }
+    private void OnDestroy()
+    {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.rockBreakSound);
+        Destroy(gameObject);
     }
 }

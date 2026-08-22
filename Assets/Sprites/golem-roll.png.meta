@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,427 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: golem-roll_0
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 44
+        width: 1142
+        height: 1230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b63a5cb599ef8749abc72cbb3c08fca
+      internalID: 981349459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_1
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 144
+        width: 815
+        height: 1248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73cd260c00c3bea46b95f47852054dd3
+      internalID: 802952704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_2
+      rect:
+        serializedVersion: 2
+        x: 3589
+        y: 190
+        width: 674
+        height: 1131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d391a0d36d1904794838e0ca020ad4
+      internalID: 1383815313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_3
+      rect:
+        serializedVersion: 2
+        x: 5142
+        y: 384
+        width: 621
+        height: 709
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f92b7cbd8fe94d4abce22e19a27b07a
+      internalID: -1817223347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_4
+      rect:
+        serializedVersion: 2
+        x: 6647
+        y: 478
+        width: 616
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5203bb1ff68791478d4db97f5e1f565
+      internalID: -2079472603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_5
+      rect:
+        serializedVersion: 2
+        x: 8071
+        y: 478
+        width: 610
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4186a9259e5484e4a9df911af2133692
+      internalID: 1852297304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_6
+      rect:
+        serializedVersion: 2
+        x: 9460
+        y: 483
+        width: 598
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3dc9dc9c17cec46ac55f13d334f9bd
+      internalID: 596377353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_7
+      rect:
+        serializedVersion: 2
+        x: 10837
+        y: 501
+        width: 603
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5edffa4e33180424b936e21f0c558f09
+      internalID: 1762283517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_8
+      rect:
+        serializedVersion: 2
+        x: 11485
+        y: 861
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20bdf04e360d76443ad599365cea9045
+      internalID: -313282677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_9
+      rect:
+        serializedVersion: 2
+        x: 11479
+        y: 797
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e6367d1c9ae094abd456db75c72b51
+      internalID: -1274636504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_10
+      rect:
+        serializedVersion: 2
+        x: 11453
+        y: 771
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15eecaef523325f4e97520e4a6084fea
+      internalID: 1867453796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_11
+      rect:
+        serializedVersion: 2
+        x: 11443
+        y: 760
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa3d8af18a1ac34d8ade0bb5425110e
+      internalID: -812679334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_12
+      rect:
+        serializedVersion: 2
+        x: 9848
+        y: 466
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303e2f29ebacba34894d81c7a3de70d1
+      internalID: 757360131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_13
+      rect:
+        serializedVersion: 2
+        x: 9955
+        y: 481
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd227fd5458a6d4daef8244ba0027f7
+      internalID: 293215734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_14
+      rect:
+        serializedVersion: 2
+        x: 8350
+        y: 461
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8abe45c184259c1489336df67519816e
+      internalID: -2072528849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_15
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 449
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e65dad141f9a04d9499f260f365792
+      internalID: -1307917488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_16
+      rect:
+        serializedVersion: 2
+        x: 9897
+        y: 457
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14ea2c532270f14f899ba18fd147fb8
+      internalID: 46653909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_17
+      rect:
+        serializedVersion: 2
+        x: 6785
+        y: 451
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3d7785301cec94d8cac0893ac0cabb
+      internalID: -1650257042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_18
+      rect:
+        serializedVersion: 2
+        x: 8391
+        y: 428
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efae891753747fa418450798649ce3d9
+      internalID: 1960070264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golem-roll_19
+      rect:
+        serializedVersion: 2
+        x: 8455
+        y: 428
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6705140f475b75d4c905e61d8b65cb97
+      internalID: 2081527998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +552,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      golem-roll_0: 981349459
+      golem-roll_1: 802952704
+      golem-roll_10: 1867453796
+      golem-roll_11: -812679334
+      golem-roll_12: 757360131
+      golem-roll_13: 293215734
+      golem-roll_14: -2072528849
+      golem-roll_15: -1307917488
+      golem-roll_16: 46653909
+      golem-roll_17: -1650257042
+      golem-roll_18: 1960070264
+      golem-roll_19: 2081527998
+      golem-roll_2: 1383815313
+      golem-roll_3: -1817223347
+      golem-roll_4: -2079472603
+      golem-roll_5: 1852297304
+      golem-roll_6: 596377353
+      golem-roll_7: 1762283517
+      golem-roll_8: -313282677
+      golem-roll_9: -1274636504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
