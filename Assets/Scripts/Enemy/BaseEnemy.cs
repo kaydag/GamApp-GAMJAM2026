@@ -15,7 +15,7 @@ public class BaseEnemy : MonoBehaviour
     protected List<Transform> waypoints;
     protected int currentPoint;
     protected int moveDirection = 1;
-    protected float damage;
+    [SerializeField] protected float damage;
 
     //trạng thái
     protected bool isDead = false;
