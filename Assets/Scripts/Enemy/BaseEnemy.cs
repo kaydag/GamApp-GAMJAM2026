@@ -90,37 +90,19 @@ public class BaseEnemy : MonoBehaviour
         if (waypoints.Count == 0 || IsStunned) return;
         if (waypoints[currentPoint] == null)
         {
-            currentPoint += moveDirection;
-            if (currentPoint >= waypoints.Count)
-            {
-                currentPoint = waypoints.Count - 2;
-                moveDirection = -1;
-            }
-            else if (currentPoint < 0)
-            {
-                currentPoint = 1;
-                moveDirection = 1;
-            }
+            ChangeWaypoint();
             return;
         }
         Transform targetPoint = waypoints[currentPoint];
         Vector2 direction = targetPoint.position - transform.position;
-        Animation.SetDirection(direction);
+        // Chỉ quan tâm trái / phải
+        if (direction.x != 0)
+        {
+            Animation.SetDirection(direction);
+        }
         transform.position = Vector2.MoveTowards(transform.position, targetPoint.position, enemyData.moveSpeed * Time.fixedDeltaTime);
         if (Vector2.Distance(transform.position, targetPoint.position) < 0.01f)
-        {
-            currentPoint += moveDirection;
-            if (currentPoint >= waypoints.Count)
-            {
-                currentPoint = waypoints.Count - 2;
-                moveDirection = -1;
-            }
-            else if (currentPoint < 0)
-            {
-                currentPoint = 1;
-                moveDirection = 1;
-            }
-        }
+            ChangeWaypoint();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -129,8 +111,7 @@ public class BaseEnemy : MonoBehaviour
         {
             attackTarget = other.gameObject;
             playerInRange = true;
-            if (this is TreeMonster)
-                return;
+            if (this is TreeMonster) return;
             attackState = new EnemyAttackState(this, attackTarget);
             stateMachine.ChangeState(attackState);
         }
@@ -234,6 +215,21 @@ public class BaseEnemy : MonoBehaviour
         if (triggerHurt)
         {
             stateMachine.ChangeState(hurtState);
+        }
+    }
+    private void ChangeWaypoint()
+    {
+        currentPoint += moveDirection;
+
+        if (currentPoint >= waypoints.Count)
+        {
+            currentPoint = waypoints.Count - 2;
+            moveDirection = -1;
+        }
+        else if (currentPoint < 0)
+        {
+            currentPoint = 1;
+            moveDirection = 1;
         }
     }
 }
