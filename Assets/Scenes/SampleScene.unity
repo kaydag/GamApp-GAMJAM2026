@@ -106765,7 +106765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4202327902899809206, guid: ea09be1a708de834088e084c3f86ed71, type: 3}
       propertyPath: m_Parameters.widthMultiplier
-      value: 1.0339103
+      value: 0.5064998
       objectReference: {fileID: 0}
     - target: {fileID: 5318017531648787264, guid: ea09be1a708de834088e084c3f86ed71, type: 3}
       propertyPath: EnemyLocations.Array.data[0]
