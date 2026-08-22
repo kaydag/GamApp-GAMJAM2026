@@ -5,6 +5,7 @@ using UnityEngine;
 public class QuestGroupData
 {
     public List<QuestData> questDatas = new List<QuestData>();
+    public GameObject questLoadout;
 }
 
 public class QuestManager : MonoBehaviour
@@ -19,7 +20,6 @@ public class QuestManager : MonoBehaviour
     private int currentQuestIndex = 0;
     // Lưu danh sách các quest đang hiện trên UI của nhóm hiện tại
     private List<Quest> spawnedQuests = new List<Quest>();
-
     private void Awake()
     {
         if (Instance == null)
@@ -53,8 +53,14 @@ public class QuestManager : MonoBehaviour
                 Quest questScript = questObj.GetComponent<Quest>();
                 if (questScript != null)
                 {
-                    questScript.SetQuest(data.targetAmount, data.LocationIndex, data.targetName, data.displayTargetName);
+                    questScript.SetQuest(data);
                     spawnedQuests.Add(questScript);
+                    if (currentGroup.questLoadout != null)
+                    {
+                        Instantiate(currentGroup.questLoadout, 
+                            PlayerDirection.instance.GetEnemyLocation(data.LocationIndex).transform.position, 
+                            Quaternion.identity);
+                    }
                 }
             }
         }

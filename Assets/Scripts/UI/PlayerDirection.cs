@@ -19,6 +19,11 @@ public class PlayerDirection : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public GameObject GetEnemyLocation(int index)
+    {
+        if (index < 0 || index >= EnemyLocations.Count) return null;
+        return EnemyLocations[index];
+    }
     private void Start()
     {
         if (lineRenderer != null)
