@@ -17,12 +17,12 @@ public class Quest : MonoBehaviour
     private int currentAmount = 0;
     private bool isCompleted = false;
     public bool IsCompleted => isCompleted;
-    public void SetQuest(int amount, int location, string enemyName, string displayName)
+    public void SetQuest(QuestData data)
     {
-        targetAmount = amount;
-        LocationIndex = location;
-        targetName = enemyName;
-        displayTargetName = displayName;
+        targetAmount = data.targetAmount;
+        LocationIndex = data.LocationIndex;
+        targetName = data.targetName;
+        displayTargetName = data.displayTargetName;
         UpdateQuestUI();
     }
     private void Start()
