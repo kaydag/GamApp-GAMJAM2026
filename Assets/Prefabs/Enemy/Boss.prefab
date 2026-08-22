@@ -156,6 +156,7 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: 9320223a0ffc9504795f07385cb5fcfb, type: 2}
   path: {fileID: 0}
   currentHealth: 0
+  damage: 0
   rockPrefab: {fileID: 4972302575193610212, guid: 1aa07a7d77b9e514989d050747946cfd, type: 3}
   throwInterval: 0.8
   skillCooldown: 10
@@ -251,6 +252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  faceRightByDefault: 0
 --- !u!114 &-6432824728604270986
 MonoBehaviour:
   m_ObjectHideFlags: 0

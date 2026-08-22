@@ -17,12 +17,12 @@ public enum EnemyAnimationState
 public class EnemyAnimation : MonoBehaviour
 {
     [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private bool faceRightByDefault = true;
     private void Awake()
     {
-        if (animator == null)
-        {
-            animator = GetComponent<Animator>();
-        }
+        if (animator == null) animator = GetComponent<Animator>();
+        if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
     }
     // Start is called before the first frame update
     void Start()
@@ -37,19 +37,17 @@ public class EnemyAnimation : MonoBehaviour
     }
     public void PlayState(EnemyAnimationState state)
     {
+        if (state == EnemyAnimationState.Stun)
+            state = EnemyAnimationState.Idle;
         animator.Play(state.ToString());
     }
     public void SetDirection(Vector2 direction)
     {
-        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-        {
-            animator.SetFloat("Horizontal", direction.x > 0 ? 1 : -1);
-            animator.SetFloat("Vertical", 0);
-        }
+        if (direction.x == 0) return;
+        bool movingRight = direction.x > 0;
+        if (faceRightByDefault) 
+            spriteRenderer.flipX = !movingRight;
         else
-        {
-            animator.SetFloat("Horizontal", 0);
-            animator.SetFloat("Vertical", direction.y > 0 ? 1 : -1);
-        }
+            spriteRenderer.flipX = movingRight;
     }
 }
