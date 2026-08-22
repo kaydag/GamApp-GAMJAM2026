@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Quest2
   m_EditorClassIdentifier: 
   targetAmount: 1
+  LocationIndex: 2
   targetName: TreeMonster
   displayTargetName: tree monster
