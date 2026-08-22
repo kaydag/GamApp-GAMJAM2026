@@ -31,8 +31,22 @@ public class PlayerAttack : MonoBehaviour
         }
         playerController = GetComponent<PlayerController>();
     }
-    public void DoNormalAttack() => currentFormAttack?.NormalAttack(playerController.LastDirection);
-    public void DoFirstSkill() => currentFormAttack?.FirstSkill(playerController.LastDirection);
+    public void DoNormalAttack()
+    {
+        currentFormAttack?.NormalAttack(playerController.LastDirection);
+    }
+    public void DoFirstSkill()
+    {     
+        currentFormAttack?.FirstSkill(playerController.LastDirection);
+    }
+    public void ChangeAttackState()
+    {
+        playerController.StateMachine.ChangeState<PlayerAttackState>();
+    }
+    public void ChangeSkillState()
+    {
+        playerController.StateMachine.ChangeState<PlayerSkillState>();
+    }
     public void SwapFormAttack()
     {
         int index = PlayerController.instance.isInSecondForm ? 1 : 0;

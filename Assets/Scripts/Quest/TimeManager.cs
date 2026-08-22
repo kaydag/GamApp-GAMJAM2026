@@ -71,8 +71,7 @@ public class TimeManager : MonoBehaviour
         {
             BlackScreen.gameObject.SetActive(false);
             TimeText.gameObject.SetActive(false);
-
-            if (!IsNight)
+            if (IsNight)
             {
                 currentCycleCount++;
             }
@@ -103,7 +102,19 @@ public class TimeManager : MonoBehaviour
             DOTween.To(() => tm.color, x => tm.color = x, nightColor, 0.5f);
         }
     }
-
+    public void ChangeColorByTime(Transform parent)
+    {
+        Color correctColor = new Color32(110, 101, 168, 255);
+        if (!IsNight)
+        {
+            correctColor = new Color32(255, 255, 255, 255);
+        }
+        SpriteRenderer[] renderers = parent.GetComponentsInChildren<SpriteRenderer>();
+        foreach (SpriteRenderer renderer in renderers)
+        {
+            renderer.color = correctColor;
+        }
+    }
     public void SummonDayTime()
     {
         Color dayColor = new Color32(255, 255, 255, 255);

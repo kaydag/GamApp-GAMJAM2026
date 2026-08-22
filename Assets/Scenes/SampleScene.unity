@@ -1599,6 +1599,12 @@ MonoBehaviour:
   - questDatas:
     - {fileID: 11400000, guid: 19870ce5cbd33e441a0de67b83b67cef, type: 2}
     questLoadout: {fileID: 4142691809711766645, guid: 26c06de91daab364490e70dc31c58232, type: 3}
+  - questDatas:
+    - {fileID: 11400000, guid: 0b2c860db07e5fd4f9911bdda3ef4d5b, type: 2}
+    questLoadout: {fileID: 7834356955309042267, guid: d6495f703c7a3a74fa813c9ab09eefeb, type: 3}
+  - questDatas:
+    - {fileID: 11400000, guid: 19870ce5cbd33e441a0de67b83b67cef, type: 2}
+    questLoadout: {fileID: 4142691809711766645, guid: 26c06de91daab364490e70dc31c58232, type: 3}
 --- !u!4 &116091310
 Transform:
   m_ObjectHideFlags: 0
@@ -1728,7 +1734,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 08c71e4e0565fe4469d1e0a593047156, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9a5466e3c944e44fa933859ae2f732b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -65980,7 +65986,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eed44235dcbd621438f7c0c4f05e2356, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7b96b04e57848640a3850fda06ed9d3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -66355,7 +66361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b450d0b398880cb458f83d1a01b399ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 95b3b7f43affa6e49bb79bd7f63aec0e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -66627,8 +66633,16 @@ MonoBehaviour:
   - Welcome, players!
   - Sol and Luna are siblings.
   - They need to defeat enemies invading their territory!
-  intermissionDialogues:
-  - Sol's ability can burn obstacles such as woods, rocks, ...
+  dialoguesBeforeQuest:
+  - There's some monster named "Orc" destroying their farms!
+  - It's night! Sol's weaker at night, so swap into Luna to complete the quest!
+  - Another day! More enemies are invading!
+  - Final boss appears! You need to swap sometimes to defeat him faster.
+  dialoguesAfterQuest:
+  - Great job! Sol's ability can burn obstacles such as woods.
+  - Monsters are defeated! Let's sleep...
+  - 'Nice! '
+  - adadada
   finalEndingDialogues:
   - The world is finally saved.
 --- !u!4 &1472832916
@@ -106704,26 +106718,6 @@ PrefabInstance:
     - target: {fileID: 1609045788687365089, guid: ea09be1a708de834088e084c3f86ed71, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4202327902899809206, guid: ea09be1a708de834088e084c3f86ed71, type: 3}
-      propertyPath: m_Parameters.textureMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4202327902899809206, guid: ea09be1a708de834088e084c3f86ed71, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f49f152fbc313b14b8d4b82329b10a1c, type: 2}
-    - target: {fileID: 4202327902899809206, guid: ea09be1a708de834088e084c3f86ed71, type: 3}
-      propertyPath: m_Parameters.textureScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4202327902899809206, guid: ea09be1a708de834088e084c3f86ed71, type: 3}
-      propertyPath: m_Parameters.textureScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4202327902899809206, guid: ea09be1a708de834088e084c3f86ed71, type: 3}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 1.0339103
       objectReference: {fileID: 0}
     - target: {fileID: 5318017531648787264, guid: ea09be1a708de834088e084c3f86ed71, type: 3}
       propertyPath: EnemyLocations.Array.data[0]

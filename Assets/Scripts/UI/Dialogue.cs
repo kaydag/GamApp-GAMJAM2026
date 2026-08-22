@@ -11,6 +11,7 @@ public class Dialogue : MonoBehaviour
     private bool isTyping = false;
     public void StartDialogue(string textToPrint)
     {
+        if (string.IsNullOrEmpty(textToPrint)) return;
         currentFullText = textToPrint;
         // Nếu đang chạy dở đoạn trước thì dừng lại
         if (typingCoroutine != null)
