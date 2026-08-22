@@ -30,12 +30,12 @@ public class Rock : MonoBehaviour
         {
             GameObject target = collision.gameObject;
             GameEvent.Attack?.Invoke(gameObject, target, damage);
-            OnDestroy();
+            Break();
         }
 
         else if (collision.CompareTag("Wall"))
         {
-            OnDestroy();
+            Break();
         }
     }
 
@@ -43,7 +43,7 @@ public class Rock : MonoBehaviour
     {
         transform.position += transform.right * speed * Time.deltaTime;
     }
-    private void OnDestroy()
+    private void Break()
     {
         AudioManager.Instance.PlaySFX(AudioManager.Instance.rockBreakSound);
         Destroy(gameObject);

@@ -44,6 +44,7 @@ public class PlayerHealth : MonoBehaviour
     void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        Debug.Log(currentHealth);
         GameEvent.HealthChanged?.Invoke(gameObject,currentHealth, maxHealth);
         if (currentHealth <= 0)
         {
