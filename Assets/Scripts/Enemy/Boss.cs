@@ -94,6 +94,7 @@ public class Boss : BaseEnemy
         {
             float angle = i * angleStep;
             Quaternion rotation = Quaternion.Euler(0f, 0f, angle);
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.rockThrowSound);
             Instantiate(rockPrefab, transform.position, rotation);
         }
     }
@@ -102,6 +103,7 @@ public class Boss : BaseEnemy
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player == null) return;
         isRolling = true;
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.rollSound);
         rollTarget = player.transform.position;
     }
     private void RollToPlayer()

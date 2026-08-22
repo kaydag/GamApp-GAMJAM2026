@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6098068070477254399}
   - component: {fileID: 4883097195056543769}
   - component: {fileID: -5941352715732567038}
+  - component: {fileID: -2274276272247052187}
   m_Layer: 0
   m_Name: FirstNormalAttackEffect
   m_TagString: Untagged
@@ -5022,3 +5023,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-2274276272247052187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5514227488939839748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa3dea89999106459781e04ecf67bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

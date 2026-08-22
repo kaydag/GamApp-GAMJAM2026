@@ -18,37 +18,35 @@ public class Wood : MonoBehaviour
     private Vector2 targetPosition;
     private Vector2 startPosition;
 
-    private bool isMoving = true;
+    [SerializeField] private bool isMoving = true;
+
+    [SerializeField] private Animator animator;
 
     private void Awake()
     {
         startPosition = transform.position;
 
-        // Trạng thái ban đầu: Wood đang bay
+        isMoving = true;
+
         projectileCollider.enabled = true;
         blockCollider.enabled = false;
-
+        GetComponent<Block>().SetActive(false);
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-
         if (player == null)
         {
             Destroy(gameObject);
             return;
         }
-
         Vector2 playerPosition = player.transform.position;
-        Vector2 toPlayer = playerPosition - startPosition;
+        Vector2 direction = (playerPosition - startPosition).normalized;
 
-        if (toPlayer.magnitude <= attackRange)
+        targetPosition = startPosition + direction * attackRange;
+        animator = GetComponent<Animator>();
+        if (animator != null)
         {
-            targetPosition = playerPosition;
-        }
-        else
-        {
-            targetPosition = startPosition + toPlayer.normalized * attackRange;
+            animator.enabled = true;
         }
     }
-
     private void Update()
     {
         if (!isMoving)
@@ -74,6 +72,11 @@ public class Wood : MonoBehaviour
         gameObject.tag = "Wall";
         projectileCollider.enabled = false;
         blockCollider.enabled = true;
+        GetComponent<Block>().SetActive(true);
+        if (animator != null)
+        {
+            animator.enabled = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -101,6 +104,7 @@ public class Wood : MonoBehaviour
     {
         if (!isMoving)
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.woodBreakSound);
             Destroy(gameObject);
         }
     }
@@ -117,6 +121,10 @@ public class Wood : MonoBehaviour
     private void OnAttack(GameObject attacker, GameObject target, float damage)
     {
         if (target != gameObject)
+        {
+            return;
+        }
+        if (!attacker.CompareTag("Player"))
             return;
 
         if (!isMoving)
