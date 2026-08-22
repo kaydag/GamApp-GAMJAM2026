@@ -17,7 +17,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private Transform questParent;
     [Header("Quest Groups Configuration")]
     [SerializeField] private List<QuestGroupData> questGroups = new List<QuestGroupData>();
-    private int currentQuestIndex = 0;
+    public int currentQuestIndex { get; private set; } = 0;
     // Lưu danh sách các quest đang hiện trên UI của nhóm hiện tại
     private List<Quest> spawnedQuests = new List<Quest>();
     private void Awake()
@@ -57,9 +57,13 @@ public class QuestManager : MonoBehaviour
                     spawnedQuests.Add(questScript);
                     if (currentGroup.questLoadout != null)
                     {
-                        Instantiate(currentGroup.questLoadout, 
+                        GameObject loadout = Instantiate(currentGroup.questLoadout, 
                             PlayerDirection.instance.GetEnemyLocation(data.LocationIndex).transform.position, 
                             Quaternion.identity);
+                        if (loadout != null && TimeManager.instance != null)
+                        {
+                            TimeManager.instance.ChangeColorByTime(loadout.transform);
+                        }
                     }
                 }
             }
@@ -76,10 +80,12 @@ public class QuestManager : MonoBehaviour
     }
     private void OnCurrentGroupCompleted()
     {
+        int finishedIndex = currentQuestIndex;
         currentQuestIndex++;
+        bool hasMoreQuests = currentQuestIndex < questGroups.Count;
         if (GameManager.instance != null)
         {
-            GameManager.instance.TriggerIntermissionDialogues(currentQuestIndex < questGroups.Count);
+            GameManager.instance.TriggerIntermissionDialogues(hasMoreQuests, finishedIndex);
         }
     }
     public void ProceedToNextGroup()
