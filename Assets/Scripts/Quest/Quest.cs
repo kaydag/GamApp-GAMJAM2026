@@ -7,14 +7,24 @@ public class Quest : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private Image finishedBox;
     [SerializeField] private Sprite finishedIcon;
+    [SerializeField] private Sprite UnFinishedIcon;
     [SerializeField] private TMP_Text contentText;
     [Header("Quest Settings")]
     public int targetAmount = 4;
+    public int LocationIndex = 0;
     public string targetName = "BaseEnemy";
     public string displayTargetName = "base enemies";
     private int currentAmount = 0;
     private bool isCompleted = false;
     public bool IsCompleted => isCompleted;
+    public void SetQuest(int amount, int location, string enemyName, string displayName)
+    {
+        targetAmount = amount;
+        LocationIndex = location;
+        targetName = enemyName;
+        displayTargetName = displayName;
+        UpdateQuestUI();
+    }
     private void Start()
     {
         UpdateQuestUI();
@@ -50,9 +60,24 @@ public class Quest : MonoBehaviour
     private void UpdateQuestUI()
     {
         contentText.text = $"Defeat {targetAmount} {displayTargetName}\n({currentAmount}/{targetAmount})";
-        if (finishedIcon != null && IsCompleted)
+        if (finishedIcon != null)
         {
-            finishedBox.sprite = finishedIcon;
+            if (IsCompleted)
+            {
+                finishedBox.sprite = finishedIcon;
+                if (PlayerDirection.instance != null)
+                {
+                    PlayerDirection.instance.HideDirection();
+                }
+            }
+            else
+            {
+                finishedBox.sprite = UnFinishedIcon;
+                if (PlayerDirection.instance != null)
+                {
+                    PlayerDirection.instance.ShowDirection(LocationIndex);
+                }
+            }
         }
     }
 }

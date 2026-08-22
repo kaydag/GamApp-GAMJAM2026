@@ -1,14 +1,27 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class QuestGroupData
+{
+    public List<QuestData> questDatas = new List<QuestData>();
+}
+
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance;
-    [Header("List Quests")]
-    [SerializeField] private List<Quest> questList = new List<Quest>();
+
+    [Header("UI Prefab & Container")]
+    [SerializeField] private GameObject questPrefab;
+    [SerializeField] private Transform questParent;
+    [Header("Quest Groups Configuration")]
+    [SerializeField] private List<QuestGroupData> questGroups = new List<QuestGroupData>();
+    private int currentQuestIndex = 0;
+    // Lưu danh sách các quest đang hiện trên UI của nhóm hiện tại
+    private List<Quest> spawnedQuests = new List<Quest>();
+
     private void Awake()
     {
-        // Tạo Singleton đơn giản để dễ gọi từ các script khác
         if (Instance == null)
         {
             Instance = this;
@@ -18,24 +31,56 @@ public class QuestManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    // Hàm kiểm tra trạng thái tất cả các quest
-    public void CheckAllQuests()
+    public void StartFirstQuest()
     {
-        foreach (var quest in questList)
+        SpawnActiveQuestGroup();
+    }
+    private void SpawnActiveQuestGroup()
+    {
+        // Xóa các quest cũ nếu có
+        foreach (var q in spawnedQuests)
         {
-            // Nếu có ít nhất 1 quest chưa hoàn thành thì dừng lại
-            if (!quest.IsCompleted)
+            if (q != null) Destroy(q.gameObject);
+        }
+        spawnedQuests.Clear();
+        if (currentQuestIndex >= questGroups.Count) return;
+        var currentGroup = questGroups[currentQuestIndex];
+        foreach (var data in currentGroup.questDatas)
+        {
+            if (questPrefab != null && questParent != null)
             {
-                return;
+                GameObject questObj = Instantiate(questPrefab, questParent);
+                Quest questScript = questObj.GetComponent<Quest>();
+                if (questScript != null)
+                {
+                    questScript.SetQuest(data.targetAmount, data.LocationIndex, data.targetName, data.displayTargetName);
+                    spawnedQuests.Add(questScript);
+                }
             }
         }
-
-        // Nếu chạy hết vòng lặp mà không return nghĩa là tất cả đã hoàn thành!
-        OnAllQuestsCompleted();
     }
-    private void OnAllQuestsCompleted()
+    public void CheckAllQuests()
     {
-        Debug.Log("Tất cả nhiệm vụ đã hoàn thành! Tiến hành phần thưởng hoặc mở khóa màn chơi tiếp theo.");
-        // Viết logic tiếp theo ở đây (ví dụ: hiện popup chiến thắng, cộng quà, chuyển scene...)
+        if (spawnedQuests.Count == 0) return;
+        foreach (var quest in spawnedQuests)
+        {
+            if (quest == null || !quest.IsCompleted) return;
+        }
+        OnCurrentGroupCompleted();
+    }
+    private void OnCurrentGroupCompleted()
+    {
+        currentQuestIndex++;
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.TriggerIntermissionDialogues(currentQuestIndex < questGroups.Count);
+        }
+    }
+    public void ProceedToNextGroup()
+    {
+        if (currentQuestIndex < questGroups.Count)
+        {
+            SpawnActiveQuestGroup();
+        }
     }
 }
