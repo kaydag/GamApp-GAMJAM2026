@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
         if (dialoguePopup != null) dialoguePopup.SetActive(true);
         currentState = DialogueState.Welcome;
         currentDialogueIndex = 0;
+        dialogueScript.onDialogueComplete.RemoveAllListeners();
+        dialogueScript.onDialogueComplete.AddListener(OnClickNextDialogue);
         dialogueScript.StartDialogue(welcomeDialogues[currentDialogueIndex]);
     }
 

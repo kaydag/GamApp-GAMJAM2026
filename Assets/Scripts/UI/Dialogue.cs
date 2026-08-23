@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
 public class Dialogue : MonoBehaviour
 {
     [SerializeField] private TMP_Text dialogueText;
@@ -9,6 +10,7 @@ public class Dialogue : MonoBehaviour
     private string currentFullText = "";
     private Coroutine typingCoroutine;
     private bool isTyping = false;
+    public UnityEvent onDialogueComplete;
     public void StartDialogue(string textToPrint)
     {
         if (string.IsNullOrEmpty(textToPrint)) return;
@@ -44,7 +46,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            if (GameManager.instance != null) GameManager.instance.OnClickNextDialogue();
+            onDialogueComplete?.Invoke();
         }
     }
 }
