@@ -19,6 +19,8 @@ public class LoadingManager : MonoBehaviour
 
     public void OnClickPlay()
     {
+        Debug.Log("Play button clicked");
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.click);
         bool hasPlayedBefore = PlayerPrefs.GetInt("HasPlayedBefore", 0) == 1;
         string nextScene;
         if (hasPlayedBefore) nextScene = gameSceneName;
