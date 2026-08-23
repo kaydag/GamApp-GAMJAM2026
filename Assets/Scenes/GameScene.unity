@@ -66871,17 +66871,22 @@ MonoBehaviour:
   welcomeDialogues:
   - Sol and Luna are siblings.
   - Sol gains power during the day, while Luna gains power at night.
-  - They need to defeat enemies invading their territory!
+  - They need to defeat enemies invading their home!
   dialoguesBeforeQuest:
-  - There's some monster named "Orc" destroying their farms!
-  - It's night! Sol's weaker at night, so swap into Luna to complete the quest!
-  - Another day! More enemies are invading!
-  - Final boss appears! You need to swap sometimes to defeat him faster.
+  - There's some monster named "Goblin" destroying their farms!
+  - It's night! Goblins now hide in the dark. Swap to Luna to attack them!
+  - Another day! A tree monster appeared!
+  - More enemies are invading! Remember, swap to Sol to destroy woods if you are
+    stuck.
+  - A large stone boss is shaking the ground! Defeat him!
+  - The final battle! You may need to swap sometimes to defeat them faster.
   dialoguesAfterQuest:
-  - Great job! Sol's ability can burn obstacles such as woods.
-  - Monsters are defeated! Let's sleep...
+  - Great job! Sol's attacks can burn enemies and destroy obstacles such as woods.
+  - Monsters are defeated! Luna's ability can stun enemies. By the way, let's sleep...
   - 'Nice! '
-  - adadada
+  - Excellent! Another night goes by.
+  - Great!
+  - Last enemies are killed and their home is saved!
   finalEndingDialogues:
   - The world is finally saved.
 --- !u!4 &1472832916

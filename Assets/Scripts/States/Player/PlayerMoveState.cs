@@ -12,15 +12,18 @@ public class PlayerMoveState : IState
     }
     public void LogicUpdate()
     {
-        if (player.Joystick.Horizontal == 0 && player.Joystick.Vertical == 0)
+        if (player.Joystick.Horizontal == 0 
+            && player.Joystick.Vertical == 0 
+            && Input.GetAxisRaw("Horizontal") == 0 
+            && Input.GetAxisRaw("Vertical") == 0)
         {
             player.StateMachine.ChangeState<PlayerIdleState>();
         }
     }
     public void PhysicsUpdate()
     {
-        float moveX = player.Joystick.Horizontal;
-        float moveY = player.Joystick.Vertical;
+        float moveX = player.Joystick.Horizontal != 0 ? player.Joystick.Horizontal : Input.GetAxisRaw("Horizontal");
+        float moveY = player.Joystick.Vertical != 0 ? player.Joystick.Vertical : Input.GetAxisRaw("Vertical");
         Vector2 direction = new Vector2(moveX, moveY).normalized;
         player.Rb.velocity = direction * player.MoveSpeed;
         // Nếu có di chuyển, cập nhật lại LastDirection
