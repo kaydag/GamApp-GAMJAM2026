@@ -33,6 +33,10 @@ public class TimeManager : MonoBehaviour
         {
             TimeText.gameObject.SetActive(false);
         }
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayDayBGM();
+        }
     }
 
     public void GameFill()
@@ -82,10 +86,18 @@ public class TimeManager : MonoBehaviour
         if (!IsNight)
         {
             SummonDayTime();
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayDayBGM();
+            }
         }
         else
         {
             SummonNightTime();
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayNightBGM();
+            }
         }
     }
     public void SummonNightTime()
