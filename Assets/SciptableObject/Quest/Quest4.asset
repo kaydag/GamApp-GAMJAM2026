@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 663bb41c7d5f7c94982d94c7757f6b9b, type: 3}
-  m_Name: Quest1
+  m_Name: Quest4
   m_EditorClassIdentifier: 
-  targetAmount: 4
-  LocationIndex: 0
-  targetName: Orc
-  displayTargetName: orcs
+  targetAmount: 1
+  LocationIndex: 1
+  targetName: TreeMonster
+  displayTargetName: tree monster
