@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -118,14 +119,7 @@ public class GameManager : MonoBehaviour
             // Hoàn thành nhiệm vụ cuối cùng -> Chạy Final Ending
             currentState = DialogueState.FinalEnding;
             currentDialogueIndex = 0;
-            if (finalEndingDialogues.Count > 0 && dialogueScript != null)
-            {
-                dialogueScript.StartDialogue(finalEndingDialogues[currentDialogueIndex]);
-            }
-            else
-            {
-                if (dialoguePopup != null) dialoguePopup.SetActive(false);
-            }
+            SceneManager.LoadScene("EndgameScene");
         }
     }
 }
