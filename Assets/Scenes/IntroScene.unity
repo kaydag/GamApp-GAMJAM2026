@@ -759,6 +759,10 @@ MonoBehaviour:
   dialogue: {fileID: 1258722895}
   nameText: {fileID: 266189266}
   introPanel: {fileID: 0}
+  isIntro: 1
+  black: {fileID: 0}
+  toBeContinued: {fileID: 0}
+  transitionDuration: 1.5
 --- !u!4 &829635719
 Transform:
   m_ObjectHideFlags: 0
@@ -1246,7 +1250,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322698695}
   m_CullTransparentMesh: 1
---- !u!1001 &1737163273
+--- !u!1001 &1490802291
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1511,4 +1515,4 @@ SceneRoots:
   - {fileID: 152355708}
   - {fileID: 1986495586}
   - {fileID: 829635719}
-  - {fileID: 1737163273}
+  - {fileID: 1490802291}
