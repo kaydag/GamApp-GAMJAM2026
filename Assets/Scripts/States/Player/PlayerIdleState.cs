@@ -14,7 +14,10 @@ public class PlayerIdleState : IState
     }
     public void LogicUpdate()
     {
-        if (player.Joystick.Horizontal != 0 || player.Joystick.Vertical != 0)
+        if (player.Joystick.Horizontal != 0 
+            || player.Joystick.Vertical != 0
+            || Input.GetAxisRaw("Horizontal") != 0
+            || Input.GetAxisRaw("Vertical") != 0)
         {
             player.StateMachine.ChangeState<PlayerMoveState>();
         }

@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
             // Hết hội thoại After -> Gọi TimeManager chuyển ngày/đêm, sau đó mở tiếp BeforeQuest của ngày mới
             if (TimeManager.instance != null)
             {
-                TimeManager.instance.GameFill();
+                TimeManager.instance.GameFill(false);
             }
             if (PlayerController.instance != null)
             {
@@ -99,6 +99,11 @@ public class GameManager : MonoBehaviour
         else if (currentState == DialogueState.FinalEnding)
         {
             if (dialoguePopup != null) dialoguePopup.SetActive(false);
+            if (TimeManager.instance != null)
+            {
+                TimeManager.instance.GameFill(true);
+            }
+            
         }
     }
 
@@ -119,7 +124,14 @@ public class GameManager : MonoBehaviour
             // Hoàn thành nhiệm vụ cuối cùng -> Chạy Final Ending
             currentState = DialogueState.FinalEnding;
             currentDialogueIndex = 0;
-            SceneManager.LoadScene("EndgameScene");
+            if (finalEndingDialogues.Count > 0 && dialogueScript != null)
+            {
+                dialogueScript.StartDialogue(finalEndingDialogues[currentDialogueIndex]);
+            }
+            else
+            {
+                if (dialoguePopup != null) dialoguePopup.SetActive(false);
+            }
         }
     }
 }

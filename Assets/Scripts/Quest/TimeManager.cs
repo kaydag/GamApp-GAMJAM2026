@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps; // Thêm thư viện Tilemaps để đổi màu bản đồ
-using DG.Tweening;
+using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class TimeManager : MonoBehaviour
         }
     }
 
-    public void GameFill()
+    public void GameFill(bool doEnd)
     {
         bool targetNightState = !IsNight;
         IsNight = targetNightState;
@@ -65,6 +66,11 @@ public class TimeManager : MonoBehaviour
         seq.Append(rt.DOAnchorPosX(0, 0.6f).SetEase(Ease.OutQuad));
         seq.AppendCallback(() =>
         {
+            if (doEnd)
+            {
+                SceneManager.LoadScene("EndgameScene");
+                return;
+            }
             ExecuteStateChange();
         });
         seq.Append(TimeText.DOFade(1f, 0.3f));

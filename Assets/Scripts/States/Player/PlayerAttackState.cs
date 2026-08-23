@@ -26,7 +26,10 @@ public class PlayerAttackState : IState
         // Khi hết thời gian animation
         if (timer >= attackDuration)
         {
-            if (player.Joystick.Horizontal != 0 || player.Joystick.Vertical != 0)
+            if (player.Joystick.Horizontal != 0
+                || player.Joystick.Vertical != 0
+                || Input.GetAxisRaw("Horizontal") != 0
+                || Input.GetAxisRaw("Vertical") != 0)
             {
                 player.StateMachine.ChangeState<PlayerMoveState>();
             }

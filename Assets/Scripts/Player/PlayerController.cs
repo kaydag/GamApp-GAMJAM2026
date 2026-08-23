@@ -50,7 +50,18 @@ public class PlayerController : MonoBehaviour, ICollidable
         StateMachine.Initialize(typeof(PlayerIdleState));
         lastPosition = transform.position;
     }
-    private void Update() => StateMachine.LogicUpdate();
+    private void Update()
+    {
+        StateMachine.LogicUpdate();
+        HandleMovementInput();
+    }
+    private void HandleMovementInput()
+    {
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+        Vector2 moveInput = new Vector2(moveX, moveY).normalized;
+        Rb.velocity = moveInput * MoveSpeed;
+    }
     private void LateUpdate()
     {
         // Lưu lại vị trí an toàn của frame trước
@@ -60,10 +71,8 @@ public class PlayerController : MonoBehaviour, ICollidable
         camPos.y = lastPosition.y;
         Camera.main.transform.position = camPos;
     }
-
     public void OnCollide()
     {
-        // Trả Player về lại vị trí trước khi đâm vào block để tạo cảm giác bị chặn đứng
         transform.position = lastPosition;
     }
     private void FixedUpdate() => StateMachine.PhysicsUpdate();
@@ -71,8 +80,6 @@ public class PlayerController : MonoBehaviour, ICollidable
     {
         isInSecondForm = !isInSecondForm;
         Animator.runtimeAnimatorController = isInSecondForm ? SecondFormController : FirstFormController;
-        // (Tùy chọn) Kích hoạt trigger chạy animation biến hình ở đây nếu có
-        // Animator.SetTrigger("Swap");
         playerAttack.SwapFormAttack();
     }
     private void PlayerGetHurt(GameObject targetObject, float currentHealth, float maxHealth, bool isPlayerHurt, bool doHeal)
