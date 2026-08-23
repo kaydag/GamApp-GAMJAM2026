@@ -38,6 +38,7 @@ public class Dialogue : MonoBehaviour
     // Nếu người chơi bấm chuột/phím để muốn hiện toàn bộ chữ luôn
     public void SkipOrComplete()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.click);
         if (isTyping)
         {
             StopCoroutine(typingCoroutine);

@@ -23,11 +23,14 @@ public class AudioManager : MonoBehaviour
     [SerializeField] public AudioClip woodBreakSound;
     [SerializeField] public AudioClip rockBreakSound;
 
+    [SerializeField] public AudioClip click;
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {

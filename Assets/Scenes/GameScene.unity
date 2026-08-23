@@ -65714,6 +65714,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1559070269}
   textSpeed: 0.05
+  onDialogueComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!224 &1018605162
 RectTransform:
   m_ObjectHideFlags: 0
@@ -66922,8 +66925,8 @@ MonoBehaviour:
   dialoguePopup: {fileID: 1018605160}
   dialogueScript: {fileID: 1018605161}
   welcomeDialogues:
-  - Welcome, players!
   - Sol and Luna are siblings.
+  - Sol gains power during the day, while Luna gains power at night.
   - They need to defeat enemies invading their territory!
   dialoguesBeforeQuest:
   - There's some monster named "Orc" destroying their farms!
