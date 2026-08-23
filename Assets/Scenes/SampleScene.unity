@@ -1600,11 +1600,12 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 19870ce5cbd33e441a0de67b83b67cef, type: 2}
     questLoadout: {fileID: 4142691809711766645, guid: 26c06de91daab364490e70dc31c58232, type: 3}
   - questDatas:
-    - {fileID: 11400000, guid: 0b2c860db07e5fd4f9911bdda3ef4d5b, type: 2}
-    questLoadout: {fileID: 7834356955309042267, guid: d6495f703c7a3a74fa813c9ab09eefeb, type: 3}
+    - {fileID: 11400000, guid: 47b02f94233d1ac4e9ec1bd730e4fe8e, type: 2}
+    - {fileID: 11400000, guid: 2055323da6cff9c4a99cb3f3a419206c, type: 2}
+    questLoadout: {fileID: 5369856023924892374, guid: 548f584f36a0ab74591857d2cd104ed0, type: 3}
   - questDatas:
-    - {fileID: 11400000, guid: 19870ce5cbd33e441a0de67b83b67cef, type: 2}
-    questLoadout: {fileID: 4142691809711766645, guid: 26c06de91daab364490e70dc31c58232, type: 3}
+    - {fileID: 11400000, guid: 58c8021dd222190448e761f34bda3e1e, type: 2}
+    questLoadout: {fileID: 4215290547230342946, guid: 7dd37ce121728f844b4e01e0747826e6, type: 3}
 --- !u!4 &116091310
 Transform:
   m_ObjectHideFlags: 0

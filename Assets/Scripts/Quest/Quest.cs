@@ -40,6 +40,7 @@ public class Quest : MonoBehaviour
     }
     public void HandleEnemyDied(BaseEnemy enemy)
     {
+        Debug.Log(enemy.name);
         if (isCompleted) return;
         if (enemy.name.Contains(targetName))
         {
