@@ -1,3 +1,4 @@
+﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -21,11 +22,25 @@ public class IntroManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject introPanel;
     private int currentIndex = 0;
+    [SerializeField] bool isIntro= false;
+    [Header("Ending")]
+    [SerializeField] private Image black;
+    [SerializeField] private TMP_Text toBeContinued;
+    [SerializeField] private float transitionDuration = 1.5f;
+
     private void Start()
     {
         dialogue.onDialogueComplete.RemoveAllListeners();
         dialogue.onDialogueComplete.AddListener(NextIntro);
         currentIndex = 0;
+        if (toBeContinued != null)
+        {
+            toBeContinued.gameObject.SetActive(false);
+        }
+        if (black != null)
+        {
+            black.gameObject.SetActive(false);
+        }
         ShowIntro(currentIndex);
     }
 
@@ -72,8 +87,34 @@ public class IntroManager : MonoBehaviour
         {
             introPanel.SetActive(false);
         }
+        if (!isIntro)
+        {
+            StartCoroutine(FinishEnding());
+            return;
+        }
         PlayerPrefs.SetInt("HasPlayedBefore", 1);
         PlayerPrefs.Save();
         SceneManager.LoadScene("GameScene");
+    }
+    private IEnumerator FinishEnding()
+    {
+        isIntro = false;
+
+        if (black != null)
+        {
+            black.gameObject.SetActive(true);
+            RectTransform rt = black.rectTransform;
+            rt.anchoredPosition =new Vector2(-Screen.width,0f);
+            yield return rt.DOAnchorPosX(0f, transitionDuration).SetEase(Ease.OutQuad).WaitForCompletion();
+        }
+        yield return new WaitForSeconds(0.5f);
+        if (toBeContinued != null)
+        {
+            toBeContinued.gameObject.SetActive(true);
+            Color textColor = toBeContinued.color;
+            textColor.a = 0f;
+            toBeContinued.color = textColor;
+            yield return toBeContinued.DOFade(1f, 0.5f).WaitForCompletion();
+        }
     }
 }
