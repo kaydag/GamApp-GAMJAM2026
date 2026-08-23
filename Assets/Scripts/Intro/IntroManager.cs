@@ -72,6 +72,8 @@ public class IntroManager : MonoBehaviour
         {
             introPanel.SetActive(false);
         }
+        PlayerPrefs.SetInt("HasPlayedBefore", 1);
+        PlayerPrefs.Save();
         SceneManager.LoadScene("GameScene");
     }
 }
