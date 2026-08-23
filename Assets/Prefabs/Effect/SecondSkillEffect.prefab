@@ -9705,6 +9705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 40
   effectType: 2
+  CanHitAtNight: 1
   duration: 5
   damagePerSecond: 2
 --- !u!82 &670114769921600551

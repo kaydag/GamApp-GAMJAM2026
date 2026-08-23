@@ -16,3 +16,4 @@ MonoBehaviour:
   maxHealth: 100
   moveSpeed: 1
   damage: 1
+  HideAtNight: 1

@@ -34,7 +34,16 @@ public class PlayerController : MonoBehaviour, ICollidable
         StateMachine.AddState(new PlayerMoveState(this));
         StateMachine.AddState(new PlayerAttackState(this));
         StateMachine.AddState(new PlayerSkillState(this));
+        StateMachine.AddState(new PlayerHurtState(this));
         playerAttack = GetComponent<PlayerAttack>();
+    }
+    private void OnEnable()
+    {
+        GameEvent.HealthChanged += PlayerGetHurt;
+    }
+    private void OnDisable()
+    {
+        GameEvent.HealthChanged -= PlayerGetHurt;
     }
     private void Start()
     {
@@ -65,5 +74,10 @@ public class PlayerController : MonoBehaviour, ICollidable
         // (Tùy chọn) Kích hoạt trigger chạy animation biến hình ở đây nếu có
         // Animator.SetTrigger("Swap");
         playerAttack.SwapFormAttack();
+    }
+    private void PlayerGetHurt(GameObject targetObject, float currentHealth, float maxHealth, bool isPlayerHurt, bool doHeal)
+    {
+        if ( !isPlayerHurt || doHeal) return;
+        StateMachine.ChangeState<PlayerHurtState>();
     }
 }

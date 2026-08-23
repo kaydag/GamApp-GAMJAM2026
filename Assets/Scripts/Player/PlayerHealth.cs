@@ -44,7 +44,7 @@ public class PlayerHealth : MonoBehaviour
     void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        GameEvent.HealthChanged?.Invoke(gameObject,currentHealth, maxHealth);
+        GameEvent.HealthChanged?.Invoke(gameObject,currentHealth, maxHealth, true, false);
         if (currentHealth <= 0)
         {
             Die();
@@ -56,12 +56,12 @@ public class PlayerHealth : MonoBehaviour
         //quay về điểm checkpoint
         currentHealth = maxHealth;
         gameObject.transform.position = Vector3.zero;
-        GameEvent.HealthChanged?.Invoke(gameObject, currentHealth, maxHealth);
+        GameEvent.HealthChanged?.Invoke(gameObject, currentHealth, maxHealth, true, false);
     }
 
     void Heal(float amount)
     {
         currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
-        GameEvent.HealthChanged?.Invoke(gameObject, currentHealth, maxHealth);
+        GameEvent.HealthChanged?.Invoke(gameObject, currentHealth, maxHealth, true, true);
     }
 }
