@@ -5,9 +5,7 @@ using TMPro; // Sử dụng nếu dùng TextMeshPro cho chữ
 public class Quest : MonoBehaviour
 {
     [Header("UI References")]
-    [SerializeField] private Image finishedBox;
-    [SerializeField] private Sprite finishedIcon;
-    [SerializeField] private Sprite UnFinishedIcon;
+    [SerializeField] private GameObject CheckMark;
     [SerializeField] private TMP_Text contentText;
     [Header("Quest Settings")]
     public int targetAmount = 4;
@@ -61,23 +59,20 @@ public class Quest : MonoBehaviour
     private void UpdateQuestUI()
     {
         contentText.text = $"Defeat {targetAmount} {displayTargetName}\n({currentAmount}/{targetAmount})";
-        if (finishedIcon != null)
+        if (IsCompleted)
         {
-            if (IsCompleted)
+            CheckMark.SetActive(true);
+            if (PlayerDirection.instance != null)
             {
-                finishedBox.sprite = finishedIcon;
-                if (PlayerDirection.instance != null)
-                {
-                    PlayerDirection.instance.HideDirection();
-                }
+                PlayerDirection.instance.HideDirection();
             }
-            else
+        }
+        else
+        {
+            CheckMark.SetActive(false);
+            if (PlayerDirection.instance != null)
             {
-                finishedBox.sprite = UnFinishedIcon;
-                if (PlayerDirection.instance != null)
-                {
-                    PlayerDirection.instance.ShowDirection(LocationIndex);
-                }
+                PlayerDirection.instance.ShowDirection(LocationIndex);
             }
         }
     }

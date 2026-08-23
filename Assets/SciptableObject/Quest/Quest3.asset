@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetAmount: 4
   LocationIndex: 1
-  targetName: Orc
-  displayTargetName: orcs
+  targetName: Goblin
+  displayTargetName: goblins
