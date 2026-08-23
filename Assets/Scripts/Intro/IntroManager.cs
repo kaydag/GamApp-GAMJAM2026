@@ -45,7 +45,15 @@ public class IntroManager : MonoBehaviour
         bg2.gameObject.SetActive(data.background == BackgroundType.Destroyed);
         luna.gameObject.SetActive(data.character == CharacterType.Luna);
         sol.gameObject.SetActive(data.character == CharacterType.Sol);
-        nameText.text = data.characterName.ToString();
+        if (data.character == CharacterType.None)
+        {
+            Name.gameObject.SetActive(false);
+        }
+        else
+        {
+            Name.gameObject.SetActive(true);
+            nameText.text = data.characterName.ToString();
+        }
         dialogue.StartDialogue(data.dialogue);
     }
     public void NextIntro()
