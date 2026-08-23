@@ -2,47 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Dùng TextMeshPro (nếu xài Text thường thì đổi sang UnityEngine.UI.Text)
+using TMPro;
 
 public class CooldownCounter : MonoBehaviour
 {
-    [Header("Cấu hình Cooldown")]
-    [SerializeField] private float cooldownTime = 5f; // Swap truyền thời gian hồi chiêu
     [Header("References UI")]
-    [SerializeField] private Button skillButton;          // Kéo cái Button vào đây
-    [SerializeField] private Image cooldownImage;       // Kéo Image làm hiệu ứng tối/fill (đặt Type là Filled)
-    [SerializeField] private TextMeshProUGUI cooldownText; // (Tùy chọn) Text hiển thị số giây
+    [SerializeField] private Button skillButton;
+    [SerializeField] private Image cooldownImage;
+    [SerializeField] private TextMeshProUGUI cooldownText;
     private float currentCooldown = 0f;
+    private float totalCooldownTime = 5f;
     private bool isCooldown = false;
     private void Start()
     {
-        // Nếu không kéo thủ công, tự động lấy Button nằm cùng GameObject
-        if (skillButton == null)
-            skillButton = GetComponent<Button>();
-        // Lắng nghe sự kiện click nút
-        if (skillButton != null)
-        {
-            skillButton.onClick.AddListener(OnSkillButtonClicked);
-        }
-        // Khởi tạo ban đầu
-        if (cooldownImage != null)
-            cooldownImage.fillAmount = 0;
-        if (cooldownText != null)
-            cooldownText.gameObject.SetActive(false);
+        if (skillButton == null) skillButton = GetComponent<Button>();
+        if (cooldownImage != null) cooldownImage.fillAmount = 0;
+        if (cooldownText != null) cooldownText.gameObject.SetActive(false);
     }
     private void Update()
     {
         if (isCooldown)
         {
             currentCooldown -= Time.deltaTime;
-            // Cập nhật hiệu ứng UI vòng tròn/tối dần (Fill Amount chạy từ 1 về 0)
             if (cooldownImage != null)
             {
-                cooldownImage.fillAmount = currentCooldown / cooldownTime;
+                float maxTime = totalCooldownTime > 0 ? totalCooldownTime : 5f;
+                cooldownImage.fillAmount = Mathf.Clamp01(currentCooldown / maxTime);
             }
-            // Cập nhật Text số giây đếm ngược (làm tròn lên cho đẹp)
             if (cooldownText != null)
             {
+                if (!cooldownText.gameObject.activeSelf)
+                    cooldownText.gameObject.SetActive(true);
+
                 cooldownText.text = Mathf.Ceil(currentCooldown).ToString();
             }
             if (currentCooldown <= 0f)
@@ -51,23 +42,40 @@ public class CooldownCounter : MonoBehaviour
             }
         }
     }
+    public void SyncCooldown(float remainingTime, float totalCooldown)
+    {
+        totalCooldownTime = totalCooldown > 0 ? totalCooldown : 5f;
 
-    private void OnSkillButtonClicked()
-    {
-        if (isCooldown) return;
-        StartCooldown();
+        if (remainingTime > 0f)
+        {
+            isCooldown = true;
+            currentCooldown = remainingTime;
+
+            if (skillButton != null) skillButton.interactable = false;
+            if (cooldownText != null)
+            {
+                cooldownText.gameObject.SetActive(true);
+                cooldownText.text = Mathf.Ceil(currentCooldown).ToString();
+            }
+            if (cooldownImage != null)
+            {
+                cooldownImage.fillAmount = currentCooldown / totalCooldownTime;
+            }
+        }
+        else
+        {
+            CooldownEnd();
+        }
     }
-    public void StartCooldown()
+    public void TriggerCooldown(float duration)
     {
-        isCooldown = true;
-        currentCooldown = cooldownTime;
-        if (skillButton != null) skillButton.interactable = false;
-        if (cooldownText != null) cooldownText.gameObject.SetActive(true);
+        SyncCooldown(duration, duration);
     }
     private void CooldownEnd()
     {
         isCooldown = false;
         currentCooldown = 0f;
+
         if (skillButton != null) skillButton.interactable = true;
         if (cooldownImage != null) cooldownImage.fillAmount = 0;
         if (cooldownText != null) cooldownText.gameObject.SetActive(false);

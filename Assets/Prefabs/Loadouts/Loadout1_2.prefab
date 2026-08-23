@@ -1146,7 +1146,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1565576053910854951, guid: c16d15d3f0b7d34408b04e012745dbb2, type: 3}
       propertyPath: m_Name
-      value: Orc
+      value: Goblin
       objectReference: {fileID: 0}
     - target: {fileID: 1653624055310714631, guid: c16d15d3f0b7d34408b04e012745dbb2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1422,7 +1422,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1565576053910854951, guid: c16d15d3f0b7d34408b04e012745dbb2, type: 3}
       propertyPath: m_Name
-      value: Orc
+      value: Goblin
       objectReference: {fileID: 0}
     - target: {fileID: 1653624055310714631, guid: c16d15d3f0b7d34408b04e012745dbb2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1554,7 +1554,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1565576053910854951, guid: c16d15d3f0b7d34408b04e012745dbb2, type: 3}
       propertyPath: m_Name
-      value: Orc
+      value: Goblin
       objectReference: {fileID: 0}
     - target: {fileID: 1653624055310714631, guid: c16d15d3f0b7d34408b04e012745dbb2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1620,7 +1620,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1565576053910854951, guid: c16d15d3f0b7d34408b04e012745dbb2, type: 3}
       propertyPath: m_Name
-      value: Orc
+      value: Goblin
       objectReference: {fileID: 0}
     - target: {fileID: 1653624055310714631, guid: c16d15d3f0b7d34408b04e012745dbb2, type: 3}
       propertyPath: m_LocalPosition.x

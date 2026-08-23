@@ -9,4 +9,6 @@ public interface IFormAttack
     public Sprite GetNormalAttackIcon();
     public Sprite GetSwapIcon();
     public Sprite GetFirstSkillIcon();
+    public float GetFirstSkillCooldown();
+    public float GetRemainingFirstSkillCooldown();
 }
