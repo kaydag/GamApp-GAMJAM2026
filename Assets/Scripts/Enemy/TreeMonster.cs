@@ -46,7 +46,11 @@ public class TreeMonster : BaseEnemy
     {
         if (woodPrefab == null || spawnPoint == null) return;
         AudioManager.Instance.PlaySFX(AudioManager.Instance.woodThrowSound);
-        Instantiate(woodPrefab, spawnPoint.position, Quaternion.Euler(0f, 0f, -45f));
+        GameObject wood = Instantiate(woodPrefab, spawnPoint.position, Quaternion.Euler(0f, 0f, -45f));
+        if (wood != null && TimeManager.instance != null)
+        {
+            TimeManager.instance.ChangeColorByTime(wood.transform);
+        }
         timer = 0f;
     }
 
@@ -60,4 +64,5 @@ public class TreeMonster : BaseEnemy
         if (isDead) return;
         stateMachine.ChangeState(idleState);
     }
+
 }

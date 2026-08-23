@@ -28,7 +28,7 @@ public class BloodUI : MonoBehaviour
     {
         
     }
-    void UpdateBloodUI(GameObject targetObject, float currentHealth, float maxHealth)
+    void UpdateBloodUI(GameObject targetObject, float currentHealth, float maxHealth, bool isPlayerHurt, bool doHeal)
     {
         if (targetObject != target) return;
         float percent = (currentHealth > 0 ? currentHealth : 0) / maxHealth;

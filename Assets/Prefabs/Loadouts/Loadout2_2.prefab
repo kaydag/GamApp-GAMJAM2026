@@ -325,6 +325,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9024972186474253304}
     m_Modifications:
+    - target: {fileID: -1238750922796662435, guid: 30f6d18f8e40c3c4abdbd6e0d33e8c9a, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1238750922796662435, guid: 30f6d18f8e40c3c4abdbd6e0d33e8c9a, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 6259814088612229936}
+    - target: {fileID: -1238750922796662435, guid: 30f6d18f8e40c3c4abdbd6e0d33e8c9a, type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1951273728954359679}
+    - target: {fileID: -1238750922796662435, guid: 30f6d18f8e40c3c4abdbd6e0d33e8c9a, type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 6746032824421588599}
+    - target: {fileID: -1238750922796662435, guid: 30f6d18f8e40c3c4abdbd6e0d33e8c9a, type: 3}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 3176410033077319243}
+    - target: {fileID: -1238750922796662435, guid: 30f6d18f8e40c3c4abdbd6e0d33e8c9a, type: 3}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 2580772931870435409}
+    - target: {fileID: -1238750922796662435, guid: 30f6d18f8e40c3c4abdbd6e0d33e8c9a, type: 3}
+      propertyPath: waypoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 1482169528912235958}
     - target: {fileID: 5286109757985623409, guid: 30f6d18f8e40c3c4abdbd6e0d33e8c9a, type: 3}
       propertyPath: m_Name
       value: EnemyPath

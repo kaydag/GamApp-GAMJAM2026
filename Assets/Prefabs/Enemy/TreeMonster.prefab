@@ -184,6 +184,7 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: 4b64d8bb7034ed94986dfd6209a50992, type: 2}
   path: {fileID: 0}
   currentHealth: 0
+  damage: 0
   woodPrefab: {fileID: 5914112428369591979, guid: 658f285777f036042ba5512d0a471dbf, type: 3}
   spawnPoint: {fileID: 8860414586365630384}
   cooldown: 1
@@ -200,6 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  faceRightByDefault: 1
 --- !u!95 &4682135336714296583
 Animator:
   serializedVersion: 5

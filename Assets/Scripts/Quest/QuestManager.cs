@@ -45,6 +45,7 @@ public class QuestManager : MonoBehaviour
         spawnedQuests.Clear();
         if (currentQuestIndex >= questGroups.Count) return;
         var currentGroup = questGroups[currentQuestIndex];
+        QuestData qData = null;
         foreach (var data in currentGroup.questDatas)
         {
             if (questPrefab != null && questParent != null)
@@ -55,17 +56,18 @@ public class QuestManager : MonoBehaviour
                 {
                     questScript.SetQuest(data);
                     spawnedQuests.Add(questScript);
-                    if (currentGroup.questLoadout != null)
-                    {
-                        GameObject loadout = Instantiate(currentGroup.questLoadout, 
-                            PlayerDirection.instance.GetEnemyLocation(data.LocationIndex).transform.position, 
-                            Quaternion.identity);
-                        if (loadout != null && TimeManager.instance != null)
-                        {
-                            TimeManager.instance.ChangeColorByTime(loadout.transform);
-                        }
-                    }
                 }
+            }
+            qData = data;
+        }
+        if (currentGroup.questLoadout != null && qData != null)
+        {
+            GameObject loadout = Instantiate(currentGroup.questLoadout,
+                PlayerDirection.instance.GetEnemyLocation(qData.LocationIndex).transform.position,
+                Quaternion.identity);
+            if (loadout != null && TimeManager.instance != null)
+            {
+                TimeManager.instance.ChangeColorByTime(loadout.transform);
             }
         }
     }

@@ -144,7 +144,7 @@ public class BaseEnemy : MonoBehaviour
     {
         if (isDead) return;
         currentHealth -= damage;
-        GameEvent.HealthChanged?.Invoke(gameObject, currentHealth, enemyData.maxHealth);
+        GameEvent.HealthChanged?.Invoke(gameObject, currentHealth, enemyData.maxHealth, false, false);
         if (currentHealth > 0)
         {
             stateMachine.ChangeState(hurtState);
@@ -166,6 +166,10 @@ public class BaseEnemy : MonoBehaviour
     public float GetMaxHealth()
     {
         return enemyData.maxHealth;
+    }
+    public bool doHideAtNight()
+    {
+        return enemyData.HideAtNight;
     }
     protected void CheckDie()
     {
@@ -203,7 +207,7 @@ public class BaseEnemy : MonoBehaviour
         if (isDead) return;
         currentHealth -= damage;
         AudioManager.Instance.PlaySFX(AudioManager.Instance.enemyHitSound);
-        GameEvent.HealthChanged?.Invoke(gameObject,currentHealth,enemyData.maxHealth);
+        GameEvent.HealthChanged?.Invoke(gameObject,currentHealth,enemyData.maxHealth, false, false);
         if (currentHealth <= 0)
         {
             CheckDie();
