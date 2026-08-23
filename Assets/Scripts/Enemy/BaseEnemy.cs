@@ -151,10 +151,6 @@ public class BaseEnemy : MonoBehaviour
         }
         else CheckDie();
     }
-    public void Die()
-    {
-        GameEvent.EnemyDie?.Invoke(this);
-    }
     public void ReturnFromHurt()
     {
         stateMachine.ChangeState(idleState);
@@ -178,6 +174,7 @@ public class BaseEnemy : MonoBehaviour
         {
             isDead = true;
             stateMachine.ChangeState(dieState);
+            GameEvent.EnemyDie?.Invoke(this);
         }
     }
     public void ApplyBurn(float duration, float damage)
